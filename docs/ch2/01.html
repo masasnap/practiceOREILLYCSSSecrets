@@ -2,10 +2,48 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>dummy text</title>
+    <title>1. translucent borders</title>
     <link rel="stylesheet" type="text/css" href="01.css">
   </head>
   <body>
-    <h1>dummy text</h1>
+    <h1 class="para"><span class="paraNum">1</span> 半透明なボーダー</h1>
+    <ul>
+      <li>背景白の box のボーダーに半透明の白を設定してもNG</li>
+    </ul>
+    <pre class="code">
+      border: 1rem solid hsla(0,0%,100%,.5);
+      background: white;</pre>
+    <div class="bg1">
+      <div class="ex1-1">Can I haz semi-transparent borders? Pretty please?</div>
+    </div>
+
+    <ul>
+      <li>これはボーダー領域にも背景が適用されるから</li>
+    </ul>
+    <div class="bg1">
+      <div class="ex1-2">Can I haz semi-transparent borders? Pretty please?</div>
+    </div>
+
+    <ul>
+      <li>ボーダーの内周までに背景を設定するには、background-clip を設定する</li>
+    </ul>
+    <pre class="code">
+      border: 1rem solid hsla(0,0%,100%,.5);
+      background-color: white;
+      background-clip: padding-box;</pre>
+    <div class="bg1">
+      <div class="ex1-3">Can I haz semi-transparent borders? Pretty please?</div>
+    </div>
+
+    <ul>
+      <li>see. CSS Backgrounds & Borders<br />
+        <a href="http://www.w3.org/TR/css-backgrounds/#the-background-clip">http://www.w3.org/TR/css-backgrounds/#the-background-clip</a>
+      </li>
+    </ul>
+    <div class="bg1">
+      <div class="ex1-5">background-clip: border-box;</div>
+      <div class="ex1-3">background-clip: padding-box;</div>
+      <div class="ex1-4">background-clip: content-box;</div>
+    </div>
   </body>
 </html>
