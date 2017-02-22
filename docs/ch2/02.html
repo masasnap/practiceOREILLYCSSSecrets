@@ -2,21 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>1. translucent borders</title>
+    <title>2. multiple borders</title>
     <link rel="stylesheet" type="text/css" href="../common.css">
-    <link rel="stylesheet" type="text/css" href="01.css">
+    <link rel="stylesheet" type="text/css" href="02.css">
   </head>
   <body>
-    <h1 class="para"><span class="paraNum">1</span> 半透明なボーダー</h1>
+    <h1 class="para"><span class="paraNum">2</span> 複数のボーダー</h1>
     <ul>
-      <li>背景白の box のボーダーに半透明の白を設定してもNG</li>
+      <li>OK</li>
     </ul>
     <pre class="code">
-      border: 1rem solid hsla(0,0%,100%,.5);
-      background: white;</pre>
-    <div class="bg1">
-      <div class="ex1-1">Can I haz semi-transparent borders? Pretty please?</div>
-    </div>
+      width: 100px;
+      height: 60px;
+      margin: 25px;
+      background: yellowgreen;
+      box-shadow: 0 0 0 10px #655,
+                  0 0 0 15px deeppink,
+                  0 2px 5px 15px rgba(0,0,0,.6);</pre>
+    <div class="ex2-1"></div>
 
     <ul>
       <li>これはボーダー領域にも背景が適用されるから</li>

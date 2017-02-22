@@ -1,0 +1,21 @@
+.para {
+	color: #C00065;
+	font-size: 2rem;
+}
+
+.paraNum {
+	display: inline-block;
+	min-width: 3rem;
+	padding: 1rem 1rem 0 0;
+	border-radius: 2rem 2rem 0;
+	background-color: #C00065;
+	color: white;
+	text-align: right;
+	letter-spacing: -1rem;
+	line-height: 0.8;
+	font-size: 3rem;
+}
+
+.code {
+	background-color: #F7EBED;
+}
