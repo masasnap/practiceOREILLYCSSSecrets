@@ -1,22 +1,14 @@
-.bg1 {
-	padding: 1rem;
-	margin: 0 3rem;
-	background: url('http://csssecrets.io/images/stone-art.jpg');
+.ex2-1 {
+	width: 100px;
+	height: 60px;
+	margin: 25px;
+	background: yellowgreen;
+	box-shadow: 0 0 0 10px #655,
+		0 0 0 15px deeppink,
+		0 2px 5px 15px rgba(0,0,0,.6);
 }
 
-.bg1 > div {
-	/* styling */
-	max-width: 16rem;
-	padding: 1rem;
-	margin: .5rem auto;
-}
-
-.ex1-1 {
-	border: 1rem solid hsla(0,0%,100%,.5);
-	background-color: white;
-}
-
-.ex1-2 {
+.ex2-2 {
 	border: 1rem dashed black;
 	background-color: green;
 }
