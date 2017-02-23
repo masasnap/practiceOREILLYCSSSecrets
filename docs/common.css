@@ -3,6 +3,11 @@
 	font-size: 2rem;
 }
 
+.subpara {
+	color: #C00065;
+	font-size: 1.6rem;
+}
+
 .paraNum {
 	display: inline-block;
 	min-width: 3rem;
