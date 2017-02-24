@@ -1,0 +1,45 @@
+.container > div {
+	display: inline-block;
+	min-width: 10rem;
+	min-height: 5rem;
+	padding: 10px;
+	color: white;
+	font: 100%/1 sans-serif;
+}
+
+.ex3-1 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: right bottom;
+}
+
+.ex3-2 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: right bottom;
+	background-position: right 20px bottom 10px;
+}
+
+.ex3-3 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: right bottom;
+	background-origin: border-box;
+	border: 10px dashed gray;
+}
+
+.ex3-4 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: right bottom;
+	background-origin: padding-box;
+	border: 10px dashed gray;
+}
+
+.ex3-5 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: right bottom;
+	background-origin: content-box;
+	border: 10px dashed gray;
+}
+
+.ex3-6 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: calc(100% - 20px) calc(100% - 10px);
+}
