@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>3. extended background position</title>
+    <link rel="stylesheet" type="text/css" href="../common.css">
+    <link rel="stylesheet" type="text/css" href="03.css">
+  </head>
+  <body>
+    <h1 class="para"><span class="paraNum">3</span> 柔軟な背景の位置指定</h1>
+    <ul>
+      <li>Background & Borders Level 3 (w3.org/TR/css3-background) では、複数のボーダーを指定不可。</li>
+      <li>border-image を使わずに CSS のみで表現できないか？</li>
+    </ul>
+
+    <h2 class="subpara">[1] box-shadow を使う</h2>
+    <ul>
+      <li>box-shadow は、カンマ区切りで値を複数指定可能</li>
+    </ul>
+    <pre class="code">
+      background: yellowgreen;
+      box-shadow: 0 0 0 10px #655,
+                  0 0 0 15px deeppink,
+                  0 2px 5px 15px rgba(0,0,0,.6);</pre>
+    <div class="container">
+      <div class="ex2-1"></div>
+      <div class="ex2-2"></div>
+      <div class="ex2-3"></div>
+    </div>
+    <ul>
+      <li>inset キーワード指定で、要素の内側にも影を描画できる</li>
+    </ul>
+    <div class="container">
+      <div class="ex2-4"></div>
+      <div class="ex2-5"></div>
+      <div class="ex2-6"></div>
+    </div>
+    <ul>
+      <li>border-radious にも追従する</li>
+    </ul>
+    <div class="container">
+      <div class="ex2-7"></div>
+      <div class="ex2-8"></div>
+    </div>
+    <ul>
+      <li>制約: 影はレイアウトに影響を与えない、イベントが発生しない、実線しか表現できない</li>
+    </ul>
+
+    <h2 class="subpara">[2] outline を使う</h2>
+    <ul>
+      <li>ボーダーが2本だけ必要なのであれば、アウトラインで表現可能</li>
+    </ul>
+    <pre class="code">
+      background: yellowgreen;
+      box-shadow: 0 0 0 10px #655,
+                  0 0 0 15px deeppink,
+                  0 2px 5px 15px rgba(0,0,0,.6);</pre>
+    <div class="container">
+      <div class="ex2-9"></div>
+      <div class="ex2-10"></div>
+      <div class="ex2-11"></div>
+    </div>
+    <ul>
+      <li>制約: 3本以上のボーダーが表現不可、レイアウトに影響を与えない、イベントが発生しない、border-radius が考慮されない</li>
+    </ul>
+    <div class="container">
+      <div class="ex2-12"></div>
+      <div class="ex2-13"></div>
+    </div>
+  </body>
+</html>
