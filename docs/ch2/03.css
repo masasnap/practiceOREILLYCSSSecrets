@@ -1,85 +1,45 @@
 .container > div {
 	display: inline-block;
-	width: 100px;
-	height: 60px;
-	margin: 25px;
-	background: yellowgreen;
+	min-width: 10rem;
+	min-height: 5rem;
+	padding: 10px;
+	color: white;
+	font: 100%/1 sans-serif;
 }
 
-.container > div:hover {
-	background: green;
+.ex3-1 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: right bottom;
 }
 
-.ex2-1 {
-	box-shadow: 0 0 0 10px #655;
+.ex3-2 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: right bottom;
+	background-position: right 20px bottom 10px;
 }
 
-.ex2-2 {
-	box-shadow: 0 0 0 10px #655,
-		0 0 0 15px deeppink;
+.ex3-3 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: right bottom;
+	background-origin: border-box;
+	border: 10px dashed gray;
 }
 
-.ex2-3 {
-	box-shadow: 0 0 0 10px #655,
-		0 0 0 15px deeppink,
-		0 2px 5px 15px rgba(0,0,0,.6);
+.ex3-4 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: right bottom;
+	background-origin: padding-box;
+	border: 10px dashed gray;
 }
 
-.ex2-4 {
-	box-shadow: 0 0 0 10px #655 inset;
+.ex3-5 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: right bottom;
+	background-origin: content-box;
+	border: 10px dashed gray;
 }
 
-.ex2-5 {
-	box-shadow: 0 0 0 10px #655 inset,
-		0 0 0 15px deeppink inset;
-}
-
-.ex2-6 {
-	box-shadow: 0 0 0 10px #655 inset,
-		0 0 0 15px deeppink inset,
-		0 2px 5px 15px rgba(0,0,0,.6) inset;
-}
-
-.ex2-7 {
-	box-shadow: 0 0 0 10px #655,
-		0 0 0 15px deeppink,
-		0 2px 5px 15px rgba(0,0,0,.6);
-	border-radius: 20px;
-}
-
-.ex2-8 {
-	box-shadow: 0 0 0 10px #655 inset,
-		0 0 0 15px deeppink inset,
-		0 2px 5px 15px rgba(0,0,0,.6) inset;
-	border-radius: 20px;
-}
-
-.ex2-9 {
-	border: 10px solid #655;
-	outline: 5px solid deeppink;
-}
-
-.ex2-10 {
-	border: 10px solid #655;
-	outline: 5px solid deeppink;
-	outline-offset: -15px;
-}
-
-.ex2-11 {
-	border: 10px solid #655;
-	outline: 5px double deeppink;
-	outline-offset: 5px;
-}
-
-.ex2-12 {
-	border: 5px solid #655;
-	outline: 5px solid deeppink;
-	border-radius: 20px;
-}
-
-.ex2-13 {
-	border: 3px solid #655;
-	outline: 3px dashed white;
-	outline-offset: -10px;
-	border-radius: 10px;
+.ex3-6 {
+	background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat #58a;
+	background-position: calc(100% - 20px) calc(100% - 10px);
 }
