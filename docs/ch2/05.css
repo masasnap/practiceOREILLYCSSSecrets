@@ -65,3 +65,34 @@
 	background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
 	background-size: 2.8rem 2.8rem;
 }
+
+.ex5-14 {
+	background: linear-gradient(60deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+	background-size: 2.8rem 2.8rem;
+}
+
+.ex5-15 {
+	background: repeating-linear-gradient(45deg, #fb3, #58a 20px);
+}
+
+.ex5-16 {
+	background: repeating-linear-gradient(45deg, #fb3, #fb3 10px, #58a 0, #58a 20px);
+}
+
+.ex5-17 {
+	background: repeating-linear-gradient(60deg, #fb3, #fb3 10px, #58a 0, #58a 20px);
+}
+
+.ex5-18 {
+	background: repeating-linear-gradient(45deg, #fb3 0, #fb3 25%, #58a 0, #58a 50%);
+	background-size: 2.8rem 2.8rem;
+}
+
+.ex5-19 {
+	background-image: repeating-linear-gradient(30deg, #79b, #79b 10px, #58a 0, #58a 20px);
+}
+
+.ex5-20 {
+	background: #58a;
+	background-image: repeating-linear-gradient(30deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.1) 10px, transparent 0, transparent 20px);
+}
