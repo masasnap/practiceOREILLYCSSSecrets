@@ -4,26 +4,37 @@
 	min-height: 8rem;
 }
 
-.ex5-1 {
-	background: linear-gradient(#fb3, #58a);
+.ex6-1 {
+	background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 0);
+	background-size: 30px 30px;
 }
 
-.ex5-2 {
-	background: linear-gradient(#fb3 20%, #58a 80%);
+.ex6-2 {
+	background-image: linear-gradient(rgba(200,0,0,.5) 50%, transparent 0);
+	background-size: 30px 30px;
 }
 
-.ex5-3 {
-	background: linear-gradient(#fb3 50%, #58a 50%);
+.ex6-3 {
+	background: white;
+	background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 0),
+			linear-gradient(rgba(200,0,0,.5) 50%, transparent 0);
+	background-size: 30px 30px;
 }
 
-.ex5-4 {
-	background: linear-gradient(#fb3 50%, #58a 50%);
-	background-size: 100% 2rem;
+.ex6-4 {
+	background: #58a;
+	background-image: linear-gradient(white 1px, transparent 0),
+			linear-gradient(90deg, white 1px, transparent 0);
+	background-size: 30px 30px;
 }
 
-.ex5-5 {
-	background: linear-gradient(#fb3 50%, #58a 0);
-	background-size: 100% 2rem;
+.ex6-5 {
+	background: #58a;
+	background-image: linear-gradient(white 2px, transparent 0),
+			linear-gradient(90deg, white 2px, transparent 0),
+			linear-gradient(hsla(0,0%,100%,.3) 1px, transparent 0),
+			linear-gradient(90deg, hsla(0,0%,100%,.3) 1px, transparent 0);
+	background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
 }
 
 .ex5-6 {
