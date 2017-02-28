@@ -1,0 +1,67 @@
+.container > div {
+	display: inline-block;
+	min-width: 8rem;
+	min-height: 8rem;
+}
+
+.ex5-1 {
+	background: linear-gradient(#fb3, #58a);
+}
+
+.ex5-2 {
+	background: linear-gradient(#fb3 20%, #58a 80%);
+}
+
+.ex5-3 {
+	background: linear-gradient(#fb3 50%, #58a 50%);
+}
+
+.ex5-4 {
+	background: linear-gradient(#fb3 50%, #58a 50%);
+	background-size: 100% 2rem;
+}
+
+.ex5-5 {
+	background: linear-gradient(#fb3 50%, #58a 0);
+	background-size: 100% 2rem;
+}
+
+.ex5-6 {
+	background: linear-gradient(#fb3 30%, #58a 0);
+	background-size: 100% 2rem;
+}
+
+.ex5-7 {
+	background: linear-gradient(#fb3 33.3%, #58a 0, #58a 66.6%, yellowgreen 0);
+	background-size: 100% 3rem;
+}
+
+.ex5-8 {
+	background: linear-gradient(to right, #fb3 50%, #58a 0);
+	background-size: 2rem 100%;
+}
+
+.ex5-9 {
+	background: linear-gradient(90deg, #fb3 50%, #58a 0);
+	background-size: 2rem 100%;
+}
+
+.ex5-10 {
+	background: linear-gradient(45deg, #fb3 50%, #58a 0);
+	background-size: 2rem 2rem;
+}
+
+.ex5-11 {
+	background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+	background-size: 2rem 2rem;
+}
+
+.ex5-12 {
+	background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+	background-size: 2.828427rem 2.828427rem;
+}
+
+.ex5-13 {
+	background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+	background-size: 2.8rem 2.8rem;
+}
