@@ -1,0 +1,115 @@
+.container > div {
+	display: inline-block;
+	width: 16rem;
+	padding: 1rem;
+	overflow: hidden;
+	resize: both;
+}
+
+.ex8-1 {
+	background: url(http://csssecrets.io/images/stone-art.jpg);
+	background-size: cover;
+}
+
+.ex8-1 > div {
+	background: white;
+	padding: 1rem;
+}
+
+div.ex8-2 {
+	width: 4rem;
+	height: 4rem;
+	background-image: url('data:image/svg+xml,\
+		<svg xmlns="http:%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="30">\
+		<circle cx="5"  cy="5"  r="5" fill="%23ab4"%2F>\
+		<circle cx="15" cy="5"  r="5" fill="%23655"%2F>\
+		<circle cx="25" cy="5"  r="5" fill="%23e07"%2F>\
+		<circle cx="5"  cy="15" r="5" fill="%23655"%2F>\
+		<circle cx="15" cy="15" r="5" fill="hsl(15, 25%, 75%)"%2F>\
+		<circle cx="25" cy="15" r="5" fill="%23655"%2F>\
+		<circle cx="5"  cy="25" r="5" fill="%23fb3"%2F>\
+		<circle cx="15" cy="25" r="5" fill="%23655"%2F>\
+		<circle cx="25" cy="25" r="5" fill="%2358a"%2F><%2Fsvg>');
+	background-size: cover;
+}
+
+.ex8-3 {
+	border: 1rem solid transparent;
+	border-image: 33.34% url('data:image/svg+xml,\
+		<svg xmlns="http:%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="30">\
+		<circle cx="5"  cy="5"  r="5" fill="%23ab4"%2F>\
+		<circle cx="15" cy="5"  r="5" fill="%23655"%2F>\
+		<circle cx="25" cy="5"  r="5" fill="%23e07"%2F>\
+		<circle cx="5"  cy="15" r="5" fill="%23655"%2F>\
+		<circle cx="15" cy="15" r="5" fill="hsl(15, 25%, 75%)"%2F>\
+		<circle cx="25" cy="15" r="5" fill="%23655"%2F>\
+		<circle cx="5"  cy="25" r="5" fill="%23fb3"%2F>\
+		<circle cx="15" cy="25" r="5" fill="%23655"%2F>\
+		<circle cx="25" cy="25" r="5" fill="%2358a"%2F><%2Fsvg>') stretch;
+}
+
+.ex8-4 {
+	border: 1rem solid transparent;
+	border-image: 33.34% url('data:image/svg+xml,\
+		<svg xmlns="http:%2F%2Fwww.w3.org%2F2000%2Fsvg" width="30" height="30">\
+		<circle cx="5"  cy="5"  r="5" fill="%23ab4"%2F>\
+		<circle cx="15" cy="5"  r="5" fill="%23655"%2F>\
+		<circle cx="25" cy="5"  r="5" fill="%23e07"%2F>\
+		<circle cx="5"  cy="15" r="5" fill="%23655"%2F>\
+		<circle cx="15" cy="15" r="5" fill="hsl(15, 25%, 75%)"%2F>\
+		<circle cx="25" cy="15" r="5" fill="%23655"%2F>\
+		<circle cx="5"  cy="25" r="5" fill="%23fb3"%2F>\
+		<circle cx="15" cy="25" r="5" fill="%23655"%2F>\
+		<circle cx="25" cy="25" r="5" fill="%2358a"%2F><%2Fsvg>') round;
+}
+
+.ex8-5 {
+	border: 1rem solid transparent;
+	background: linear-gradient(white, white),
+		url(http://csssecrets.io/images/stone-art.jpg);
+	background-size: cover;
+	background-clip: padding-box, border-box;
+}
+
+.ex8-6 {
+	border: 1rem solid transparent;
+	background: linear-gradient(white, white),
+		url(http://csssecrets.io/images/stone-art.jpg);
+	background-size: cover;
+	background-clip: padding-box, border-box;
+	background-origin: border-box;
+}
+
+.ex8-7 {
+	border: 1rem solid transparent;
+	background: linear-gradient(white, white) padding-box,
+		url(http://csssecrets.io/images/stone-art.jpg) border-box  0 / cover;
+}
+
+.ex8-8 {
+	border: 1rem solid transparent;
+	background: linear-gradient(white, white) padding-box,
+		repeating-linear-gradient(-45deg,
+			red 0, red 12.5%,
+			transparent 0, transparent 25%,
+			#58a 0, #58a 37.5%,
+			transparent 0, transparent 50%) 0 / 5rem 5rem;
+}
+
+.ex8-9 {
+	border: 16px solid transparent;
+	border-image: 16 repeating-linear-gradient(-45deg,
+			red 0, red 1rem,
+			transparent 0, transparent 2rem,
+			#58a 0, #58a 3rem,
+			transparent 0, transparent 4rem);
+}
+
+@keyframes ants { to { background-position: 100% 100%; } }
+
+.ex8-10 {
+	border: 1px solid transparent;
+	background: linear-gradient(white, white) padding-box,
+		repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .6em .6em;
+	animation: ants 12s linear infinite;
+}
