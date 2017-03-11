@@ -1,12 +1,111 @@
-.container > div {
-	display: inline-block;
-	min-width: 8rem;
-	min-height: 8rem;
+.container {
+	position: relative;
 }
 
-.ex6-1 {
-	background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 0);
-	background-size: 30px 30px;
+.container > div {
+	display: inline-block;
+}
+
+.ex13-1 {
+	width: 7rem;
+	height: 1.6rem;
+	margin: 0 1rem;
+	padding: .5rem 0;
+	color: white;
+	background-color: cadetblue;
+	font: 125%/1.25 impact, sans-serif;
+	text-align: center;
+}
+
+.ex13-1::before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-bottom: 2.6rem solid cadetblue;
+	border-left: .8rem solid transparent;
+	position: relative;
+	top: -2.05rem;
+	left: -1rem;
+}
+
+.ex13-1::after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-bottom: 2.6rem solid cadetblue;
+	border-right: .8rem solid transparent;
+	position: relative;
+	top: -2.05rem;
+	left: 1rem;
+}
+
+.ex13-2 {
+	width: 7rem;
+	height: 1.6rem;
+	margin: 0 1rem;
+	padding: .5rem 0;
+	color: white;
+	background-color: cadetblue;
+	font: 125%/1.25 impact, sans-serif;
+	text-align: center;
+}
+
+.ex13-2::before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-bottom: 2.6rem solid blue;
+	border-left: .8rem solid transparent;
+	position: relative;
+	top: -2.05rem;
+	left: -1rem;
+}
+
+.ex13-2::after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-bottom: 2.6rem solid blue;
+	border-right: .8rem solid transparent;
+	position: relative;
+	top: -2.05rem;
+	left: 1rem;
+}
+
+.ex13-3 {
+	width: 7rem;
+	height: 1.6rem;
+	margin: 0 1rem;
+	padding: .5rem 0;
+	color: white;
+	background-color: cadetblue;
+	font: 125%/1.25 impact, sans-serif;
+	text-align: center;
+	border-radius: 1rem 1rem 0 0;
+	border: solid red;
+	border-width: .3rem 0;
+}
+
+.ex13-3::before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-bottom: 2.6rem solid cadetblue;
+	border-left: .8rem solid transparent;
+	position: relative;
+	top: -2.05rem;
+	left: -1rem;
+}
+
+.ex13-3::after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-bottom: 2.6rem solid cadetblue;
+	border-right: .8rem solid transparent;
+	position: relative;
+	top: -2.05rem;
+	left: 1rem;
 }
 
 .ex6-2 {
