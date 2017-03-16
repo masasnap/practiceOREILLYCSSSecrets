@@ -1,0 +1,51 @@
+.container > a {
+	display: inline-block;
+	min-width: 1rem;
+	min-height: 1rem;
+	margin: 1rem;
+	padding: .5rem 1rem;
+	background: #58a;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	font: bold 200%/1 sans-serif;
+	cursor: pointer;
+}
+
+.ex10-1 {
+	transform: skewX(-45deg);
+}
+
+.ex10-2 {
+	transform: skewX(-45deg);
+}
+
+.ex10-2 > div {
+	transform: skewX(45deg);
+}
+
+a.ex10-3 {
+	position: relative;
+	background-color: transparent;
+}
+
+.ex10-3::before {
+	content: '';
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: #58a;
+}
+
+a.ex10-4 {
+	position: relative;
+	background-color: transparent;
+}
+
+.ex10-4::before {
+	content: '';
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: #58a;
+	z-index: -1;
+	transform: skew(-45deg);
+}
