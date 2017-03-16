@@ -2,22 +2,19 @@
 	display: inline-block;
 	width: 8rem;
 	height: 8rem;
+	border-radius: 50%;
+	background-color: yellowgreen;
+	color: #655;
 }
 
 .ex14-1 {
-	border-radius: 50%;
-	background: yellowgreen;
 }
 
 .ex14-2 {
-	border-radius: 50%;
-	background: yellowgreen;
 	background-image: linear-gradient(to right, transparent 50%, #655 0);
 }
 
 .ex14-3 {
-	border-radius: 50%;
-	background: yellowgreen;
 	background-image: linear-gradient(to right, transparent 50%, #655 0);
 }
 
@@ -29,8 +26,6 @@
 }
 
 .ex14-4 {
-	border-radius: 50%;
-	background: yellowgreen;
 	background-image: linear-gradient(to right, transparent 50%, #655 0);
 }
 
@@ -45,8 +40,6 @@
 }
 
 .ex14-5 {
-	border-radius: 50%;
-	background: yellowgreen;
 	background-image: linear-gradient(to right, transparent 50%, #655 0);
 }
 
@@ -62,10 +55,7 @@
 }
 
 .ex14-6 {
-	border-radius: 50%;
-	background: yellowgreen;
 	background-image: linear-gradient(to right, transparent 50%, #655 0);
-	color: #655;
 }
 
 .ex14-6::before {
@@ -80,8 +70,6 @@
 }
 
 .ex14-7 {
-	border-radius: 50%;
-	background: yellowgreen;
 	background-image: linear-gradient(to right, transparent 50%, #655 0);
 }
 
@@ -97,10 +85,7 @@
 }
 
 .ex14-8 {
-	border-radius: 50%;
-	background: yellowgreen;
-	background-image: linear-gradient(to right, transparent 50%, currentColor 0);
-	color: #655;
+	background-image: linear-gradient(to right, transparent 50%, #655 0);
 }
 
 .ex14-8::before {
@@ -111,12 +96,89 @@
 	border-radius: 0 100% 100% 0 / 50%;
 	background-color: inherit;
 	transform-origin: left;
-	animation: spin 3s linear infinite, bg 6s step-end infinite;
+	transform: rotate(.6turn);
+}
+
+.ex14-9 {
+	background-image: linear-gradient(to right, transparent 50%, #655 0);
+}
+
+.ex14-9::before {
+	content: '';
+	display: block;
+	margin-left: 50%;
+	height: 100%;
+	border-radius: 0 100% 100% 0 / 50%;
+	background-color: #655;
+	transform-origin: left;
+	transform: rotate(.1turn);
+}
+
+.ex14-10 {
+	background-image: linear-gradient(to right, transparent 50%, #655 0);
+}
+
+.ex14-10::before {
+	content: '';
+	display: block;
+	margin-left: 50%;
+	height: 100%;
+	border-radius: 0 100% 100% 0 / 50%;
+	background-color: #655;
+	transform-origin: left;
+	transform: rotate(.2turn);
+}
+
+.ex14-11 {
+	background-image: linear-gradient(to right, transparent 50%, #655 0);
+}
+
+.ex14-11::before {
+	content: '';
+	display: block;
+	margin-left: 50%;
+	height: 100%;
+	border-radius: 0 100% 100% 0 / 50%;
+	background-color: #655;
+	transform-origin: left;
+	transform: rotate(.4turn);
+}
+
+.ex14-12 {
+	background-image: linear-gradient(to right, transparent 50%, #655 0);
+}
+
+.ex14-12::before {
+	content: '';
+	display: block;
+	margin-left: 50%;
+	height: 100%;
+	border-radius: 0 100% 100% 0 / 50%;
+	background-color: #655;
+	transform-origin: left;
+	transform: rotate(.5turn);
 }
 
 @keyframes spin {
 	to { transform: rotate(.5turn); }
 }
+
 @keyframes bg {
 	50% { background: currentColor; }
+}
+
+.ex14-13 {
+	background-image: linear-gradient(to right, transparent 50%, currentColor 0);
+
+}
+
+.ex14-13::before {
+	content: '';
+	display: block;
+	margin-left: 50%;
+	height: 100%;
+	border-radius: 0 100% 100% 0 / 50%;
+	background-color: inherit;
+	transform-origin: left;
+	animation: spin 3s linear infinite, bg 6s step-end infinite;
 }
