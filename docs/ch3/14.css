@@ -4,7 +4,6 @@
 	height: 8rem;
 	border-radius: 50%;
 	background-color: yellowgreen;
-	color: #655;
 }
 
 .ex14-1 {
@@ -164,12 +163,11 @@
 }
 
 @keyframes bg {
-	50% { background: currentColor; }
+	50% { background: #655; }
 }
 
 .ex14-13 {
-	background-image: linear-gradient(to right, transparent 50%, currentColor 0);
-
+	background-image: linear-gradient(to right, transparent 50%, #655 0);
 }
 
 .ex14-13::before {
@@ -181,4 +179,52 @@
 	background-color: inherit;
 	transform-origin: left;
 	animation: spin 3s linear infinite, bg 6s step-end infinite;
+}
+
+div.ex14-14 {
+	position: relative;
+	line-height: 8rem;
+	height: auto;
+	background-image: linear-gradient(to right, transparent 50%, #655 0);
+	color: transparent;
+	text-align: center;
+
+}
+
+.ex14-14::before {
+	content: '';
+	position: absolute;
+	top: 0; left: 50%;
+	width: 50%; height: 100%;
+	border-radius: 0 100% 100% 0 / 50%;
+	background-color: inherit;
+	transform-origin: left;
+	animation: spin 50s linear infinite, bg 100s step-end infinite;
+	animation-play-state: paused;
+	animation-delay: inherit;
+}
+
+.ex14-15 {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin: 10px;
+	transform: rotate(-90deg);
+}
+
+svg {
+	background: yellowgreen;
+	border-radius: 50%;
+}
+
+circle {
+	fill: yellowgreen;
+	stroke: #655;
+	stroke-width: 32;
+}
+
+@keyframes grow { to { stroke-dasharray: 100 100 } }
+
+.ex14-15.animated circle {
+	animation: grow 2s infinite linear;
 }
