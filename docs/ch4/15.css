@@ -1,51 +1,25 @@
-.container > a {
+.container > div {
 	display: inline-block;
-	min-width: 1rem;
-	min-height: 1rem;
+	min-width: 8rem;
+	min-height: 5rem;
 	margin: 1rem;
 	padding: .5rem 1rem;
-	background: #58a;
-	color: white;
-	text-transform: uppercase;
-	text-decoration: none;
-	font: bold 200%/1 sans-serif;
-	cursor: pointer;
+	background: #fb3;
 }
 
-.ex10-1 {
-	transform: skewX(-45deg);
+.ex15-1 {
+	box-shadow: .2rem .3rem .4rem rgba(0,0,0,.5);
 }
 
-.ex10-2 {
-	transform: skewX(-45deg);
+.ex15-2 {
+	box-shadow: 0 .5rem .4rem -.4rem black;
 }
 
-.ex10-2 > div {
-	transform: skewX(45deg);
+.ex15-3 {
+	box-shadow: .3rem .3rem .6rem -.3rem black;
 }
 
-a.ex10-3 {
-	position: relative;
-	background-color: transparent;
-}
-
-.ex10-3::before {
-	content: '';
-	position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
-	background: #58a;
-}
-
-a.ex10-4 {
-	position: relative;
-	background-color: transparent;
-}
-
-.ex10-4::before {
-	content: '';
-	position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
-	background: #58a;
-	z-index: -1;
-	transform: skew(-45deg);
+.ex15-4 {
+	box-shadow: .5rem 0 .5rem -.5rem black,
+		-.5rem 0 .5rem -.5rem black;
 }
