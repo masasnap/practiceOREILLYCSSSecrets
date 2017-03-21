@@ -40,5 +40,75 @@
     <div class="container">
       <div class="ex14-13"></div>
     </div>
+
+    <h2 class="subpara">格子模様</h2>
+    <ul>
+      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
+      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
+    </ul>
+    <pre class="code">
+      background-position: right bottom;</pre>
+    <div class="container">
+      <div class="ex14-14">0%</div>
+      <div class="ex14-14">20%</div>
+      <div class="ex14-14">40%</div>
+      <div class="ex14-14">60%</div>
+      <div class="ex14-14">80%</div>
+      <div class="ex14-14">100%</div>
+    </div>
+
+    <h2 class="subpara">格子模様</h2>
+    <ul>
+      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
+      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
+    </ul>
+    <pre class="code">
+      background-position: right bottom;</pre>
+    <div class="container">
+      <div class="ex14-15">0%</div>
+      <div class="ex14-15">20%</div>
+      <div class="ex14-15">40%</div>
+      <div class="ex14-15">60%</div>
+      <div class="ex14-15">80%</div>
+      <div class="ex14-15">100%</div>
+    </div>
+    <div class="container">
+      <div class="ex14-15 animated">0%</div>
+      <div class="ex14-15 animated">20%</div>
+      <div class="ex14-15 animated">40%</div>
+      <div class="ex14-15 animated">60%</div>
+      <div class="ex14-15 animated">80%</div>
+      <div class="ex14-15 animated">100%</div>
+    </div>
+    <script>
+      function $$(selector, context) {
+        context = context || document;
+        var elements = context.querySelectorAll(selector);
+        return Array.prototype.slice.call(elements);
+      }
+      $$('.ex14-14').forEach(function(pie) {
+        var p = parseFloat(pie.textContent);
+        pie.style.animationDelay = '-' + p + 's';
+      });
+      $$('.ex14-15').forEach(function(pie) {
+        var p = parseFloat(pie.textContent);
+        var NS = "http://www.w3.org/2000/svg";
+        var svg = document.createElementNS(NS, "svg");
+        var circle = document.createElementNS(NS, "circle");
+        var title = document.createElementNS(NS, "title");
+
+        circle.setAttribute("r", 16);
+        circle.setAttribute("cx", 16);
+        circle.setAttribute("cy", 16);
+        circle.setAttribute("stroke-dasharray", p + " 100");
+
+        svg.setAttribute("viewBox", "0 0 32 32");
+        title.textContent = pie.textContent;
+        pie.textContent = '';
+        svg.appendChild(title);
+        svg.appendChild(circle);
+        pie.appendChild(svg);
+      });
+    </script>
   </body>
 </html>
