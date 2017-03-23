@@ -5,41 +5,59 @@
 	justify-content: center;
 	vertical-align: bottom;
 	box-sizing: border-box;
-	width: 6rem;
-	height: 6rem;
-	margin: .6rem;
-	font: 200%/1.6 serif;
+	width: 9rem;
+	height: 9rem;
+	margin: .9rem;
+	font: 180%/1.6 serif;
 	text-align: center;
 }
 
 .ex16-1, .ex16-4 {
 	background: #fb3;
-	border-radius: .3rem;
+	border-radius: .9rem;
 }
 
 .ex16-1::before, .ex16-4::before {
 	content: '';
 	position: absolute;
-	top: 1rem;
-	right: -.7rem;
+	top: 2.5rem;
+	right: -.9rem;
 	width: 0;
 	height: 0;
-	border: 1rem solid transparent;
+	border: 1.2rem solid transparent;
 	border-left-color: #fb3;
 	border-right-width: 0;
 }
 
 .ex16-2, .ex16-5 {
-	border: .3rem dotted #fb3;
+	border: .5rem dotted #fb3;
 }
 
 .ex16-3, .ex16-6 {
 	background: #fb3;
-	border: .5rem solid #58a;
+	border: .9rem solid #58a;
 	border-image: 1 url('data:image/svg+xml,\
-		<svg xmlns="http://www.w3.org/2000/svg"\
-			width="3" height="3" fill"%23fb3">\
-			<polygon points="0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2"/>\
+		<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="%23fb3">\
+		<polygon points="0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2"/>\
 		</svg>');
 	background-clip: padding-box;
+}
+
+.ex16-1, .ex16-2, .ex16-3 {
+	box-shadow: .2rem .2rem .2rem rgba(0,0,0,.5);
+}
+
+.ex16-4, .ex16-5, .ex16-6 {
+	-webkit-filter: drop-shadow(.2rem .2rem .2rem rgba(0,0,0,.5));
+		filter: drop-shadow(.2rem .2rem .2rem rgba(0,0,0,.5));
+}
+
+.container > .ex16-7 {
+	width: 10rem;
+	font: 160%/1.4 Impact, serif;
+
+	color: deeppink;
+	border: .2rem solid;
+	text-shadow: .2rem .3rem yellow;
+	filter: drop-shadow(.1rem .1rem .2rem gray);
 }
