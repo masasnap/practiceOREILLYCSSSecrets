@@ -1,38 +1,67 @@
 .container {
-	position: relative;
-	margin: 1rem;
-}
-
-.container > div {
-	display: inline-block;
-}
-
-body {
 	min-height: 100vh;
 	box-sizing: border-box;
 	margin: 0;
-	padding-top: calc(50vh - 6em);
-	font: 150%/1.6 Baskerville, Palatino, serif;
-}
-
-body, main::before {
+	padding: .5rem;
+	font: 120%/1.2;
 	background: url("http://csssecrets.io/images/tiger.jpg") 0 / cover fixed;
 }
 
 main {
-	position: relative;
-	margin: 0 auto;
-	padding: 1em;
-	max-width: 23em;
-	background: hsla(0,0%,100%,.25) border-box;
-	overflow: hidden;
-	border-radius: .3em;
+	margin: .5rem auto;
+	max-width: 30rem;
+	border-radius: .5rem;
 	box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset,
 	            0 .5em 1em rgba(0, 0, 0, 0.6);
 	text-shadow: 0 1px 1px hsla(0,0%,100%,.3);
 }
 
-main::before {
+blockquote { font-style: italic }
+blockquote cite { font-style: normal; }
+
+.ex18-1 {
+	background: hsla(0,0%,100%,.25);
+}
+
+.ex18-2 {
+	background: hsla(0,0%,100%,.5);
+}
+
+.ex18-3 {
+	position: relative;
+	background: hsla(0,0%,100%,.25);
+}
+
+.ex18-3::before {
+	content: '';
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: rgba(255,0,0,.5);
+}
+
+.ex18-4 {
+	position: relative;
+	background: hsla(0,0%,100%,.25);
+}
+
+.ex18-4::before {
+	background: url("http://csssecrets.io/images/tiger.jpg") 0 / cover fixed;
+	content: '';
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: -1;
+	-webkit-filter: blur(20px);
+	filter: blur(20px);
+}
+
+.ex18-5 {
+	position: relative;
+	background: hsla(0,0%,100%,.25) border-box;
+	overflow: hidden;
+}
+
+.ex18-5::before {
+	background: url("http://csssecrets.io/images/tiger.jpg") 0 / cover fixed;
 	content: '';
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
@@ -41,6 +70,3 @@ main::before {
 	-webkit-filter: blur(20px);
 	filter: blur(20px);
 }
-
-blockquote { font-style: italic }
-blockquote cite { font-style: normal; }
