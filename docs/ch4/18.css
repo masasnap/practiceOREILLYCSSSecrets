@@ -1,8 +1,8 @@
-.container {
+body {
 	min-height: 100vh;
 	box-sizing: border-box;
 	margin: 0;
-	padding: .5rem;
+	padding: 0 .5rem 10rem;
 	font: 120%/1.2;
 	background: url("http://csssecrets.io/images/tiger.jpg") 0 / cover fixed;
 }
