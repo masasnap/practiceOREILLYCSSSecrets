@@ -5,79 +5,89 @@
 	background: #fb3;
 }
 
-.ex9-1 {
-	border-radius: 4rem;
+.ex21-2 > dd {
+	margin: 0;
+	font-weight: bold;
 }
 
-.ex9-2 {
-	width: 12rem;
-	border-radius: 4rem;
+.ex21-3 > dt {
+	display: inline;
+}
+.ex21-3 > dd {
+	display: inline;
+	margin: 0;
+	font-weight: bold;
 }
 
-.ex9-3 {
-	width: 12rem;
-	border-radius: 1.5rem / 1rem;
+.ex21-4 > dt {
+	display: inline;
+}
+.ex21-4 > dd {
+	display: inline;
+	margin: 0;
+	font-weight: bold;
+}
+.ex21-4 > dd::after {
+	content: "\A";
 }
 
-.ex9-4 {
-	width: 12rem;
-	border-radius: 6rem / 4rem;
+.ex21-5 > dt {
+	display: inline;
+}
+.ex21-5 > dd {
+	display: inline;
+	margin: 0;
+	font-weight: bold;
+}
+.ex21-5 > dd::after {
+	content: "\A";
+	white-space: pre;
 }
 
-.ex9-5 {
-	width: 12rem;
-	height: 10rem;
-	border-radius: 6rem / 4rem;
+.ex21-6 > dt {
+	display: inline;
+}
+.ex21-6 > dd {
+	display: inline;
+	margin: 0;
+	font-weight: bold;
+}
+.ex21-6 > dt::before {
+	content: "\A";
+	white-space: pre;
 }
 
-.ex9-6 {
-	width: 12rem;
-	height: 10rem;
-	border-radius: 50% / 50%;
+.ex21-7 > dt {
+	display: inline;
+}
+.ex21-7 > dd {
+	display: inline;
+	margin: 0;
+	font-weight: bold;
+}
+.ex21-7 > dd + dt::before {
+	content: "\A";
+	white-space: pre;
+}
+.ex21-7 > dd + dd::before {
+	content: ", ";
+	white-space: normal;
 }
 
-.ex9-7 {
-	width: 12rem;
-	height: 10rem;
-	border-radius: 50%;
+.ex21-8 > dt {
+	display: inline;
 }
-
-.ex9-8 {
-	width: 12rem;
-	border-radius: 50% / 100% 100% 0 0;
+.ex21-8 > dd {
+	display: inline;
+	margin: 0;
+	font-weight: bold;
 }
-
-.ex9-9 {
-	width: 12rem;
-	border-radius: 50% / 0 0 100% 100%;
+.ex21-8 > dd + dt::before {
+	content: "\A";
+	white-space: pre;
 }
-
-.ex9-10 {
-	width: 12rem;
-	border-radius: 100% 0 0 100% / 50%;
-}
-
-.ex9-11 {
-	width: 12rem;
-	border-radius: 0 100% 100% 0 / 50%;
-}
-
-.ex9-12 {
-	width: 12rem;
-	border-radius: 100% 0 0 0;
-}
-
-.ex9-13 {
-	width: 12rem;
-	border-radius: 0 100% 0 0;
-}
-
-.ex9-14 {
-	width: 12rem;
-	border-radius: 0 0 100% 0;
-}
-
-.ex9-15 {
-	width: 12rem;
-	border-radius: 0 0 0 100%;
+.ex21-8 > dd + dd::before {
+	content: ", ";
+	white-space: normal;
+	margin-left: -.25em;
 }
