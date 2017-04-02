@@ -1,83 +1,19 @@
-.container > div {
+.container > pre {
 	display: inline-block;
-	min-width: 8rem;
-	min-height: 8rem;
-	background: #fb3;
+	padding: .5em;
+	line-height: 1.5;
+	background: hsl(20, 50%, 95%);
+	font-family: Consolas, monospace;
 }
 
-.ex9-1 {
-	border-radius: 4rem;
+.ex23-2 {
+	tab-size: 2;
 }
 
-.ex9-2 {
-	width: 12rem;
-	border-radius: 4rem;
+.ex23-3 {
+	tab-size: 4;
 }
 
-.ex9-3 {
-	width: 12rem;
-	border-radius: 1.5rem / 1rem;
-}
-
-.ex9-4 {
-	width: 12rem;
-	border-radius: 6rem / 4rem;
-}
-
-.ex9-5 {
-	width: 12rem;
-	height: 10rem;
-	border-radius: 6rem / 4rem;
-}
-
-.ex9-6 {
-	width: 12rem;
-	height: 10rem;
-	border-radius: 50% / 50%;
-}
-
-.ex9-7 {
-	width: 12rem;
-	height: 10rem;
-	border-radius: 50%;
-}
-
-.ex9-8 {
-	width: 12rem;
-	border-radius: 50% / 100% 100% 0 0;
-}
-
-.ex9-9 {
-	width: 12rem;
-	border-radius: 50% / 0 0 100% 100%;
-}
-
-.ex9-10 {
-	width: 12rem;
-	border-radius: 100% 0 0 100% / 50%;
-}
-
-.ex9-11 {
-	width: 12rem;
-	border-radius: 0 100% 100% 0 / 50%;
-}
-
-.ex9-12 {
-	width: 12rem;
-	border-radius: 100% 0 0 0;
-}
-
-.ex9-13 {
-	width: 12rem;
-	border-radius: 0 100% 0 0;
-}
-
-.ex9-14 {
-	width: 12rem;
-	border-radius: 0 0 100% 0;
-}
-
-.ex9-15 {
-	width: 12rem;
-	border-radius: 0 0 0 100%;
+.ex23-4 {
+	tab-size: 0;
 }
