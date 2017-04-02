@@ -1,12 +1,15 @@
 .container > div {
-	display: inline-block;
-	min-width: 8rem;
-	min-height: 8rem;
-	background: #fb3;
+	font: 200%/1.6 serif;
+	margin: .2rem;
+	padding: .5rem;
 }
 
-.ex9-1 {
-	border-radius: 4rem;
+.ex24-2 {
+	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+}
+
+.ex24-3 {
+	font-variant-ligatures: no-common-ligatures no-discretionary-ligatures no-historical-ligatures;
 }
 
 .ex9-2 {
