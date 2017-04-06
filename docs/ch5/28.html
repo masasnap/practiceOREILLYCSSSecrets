@@ -20,64 +20,61 @@
     <pre class="code">
       background-position: right bottom;</pre>
     <div class="container">
-      <div class="ex13-1">Trapezoid</div>
-      <div class="ex13-2">Trapezoid</div>
-      <div class="ex13-3">Trapezoid</div>
+      <div class="ex28-1">
+        <svg viewBox="0 0 100 100">
+          <path d="M 0,50 a 50,50 0 1,1 0,1 z" />
+        </svg>
+      </div>
+      <div class="ex28-2">
+        <svg viewBox="0 0 100 100">
+          <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle" />
+          <text><textPath xlink:href="#circle">circular reasoning works because</textPath></text>
+        </svg>
+      </div>
+      <div class="ex28-3">
+        <svg viewBox="0 0 100 100">
+          <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle" />
+          <text><textPath xlink:href="#circle">circular reasoning works because</textPath></text>
+        </svg>
+      </div>
+      <div class="ex28-4">
+        <svg viewBox="0 0 100 100">
+          <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle" />
+          <text><textPath xlink:href="#circle">circular reasoning works because</textPath></text>
+        </svg>
+      </div>
+      <div class="ex28-5 circular">circular reasoning works because</div>
+      <div class="ex28-6 circular">circular reasoning works because</div>
     </div>
+    <script>
+function $$(selector, context) {
+	context = context || document;
+	var elements = context.querySelectorAll(selector);
+	return Array.prototype.slice.call(elements);
+}
 
-    <h2 class="subpara">水玉模様</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex13-4">Trapezoid</div>
-      <div class="ex13-5">Trapezoid</div>
-      <div class="ex13-6">Trapezoid</div>
-      <div class="ex13-7">Trapezoid</div>
-      <div class="ex13-8">Trapezoid</div>
-    </div>
+$$('.circular').forEach(function(el) {
+	var NS = "http://www.w3.org/2000/svg";
 
-    <nav class="ex13-9">
-      <a href="#">Home</a>
-      <a href="#" class="selected">Projects</a>
-      <a href="#">About</a>
-    </nav>
-    <div class="main">Content area</div>
+	var svg = document.createElementNS(NS, "svg");
+	svg.setAttribute("viewBox", "0 0 100 100");
 
-    <nav class="ex13-10">
-      <a href="#">Home</a>
-      <a href="#" class="selected">Projects</a>
-      <a href="#">About</a>
-    </nav>
-    <div class="main">Content area</div>
+	var circle = document.createElementNS(NS, "path");
+	circle.setAttribute("d", "M0,50 a50,50 0 1,1 0,1z");
+	circle.setAttribute("id", "circle");
 
-    <nav class="ex13-11">
-      <a href="#">Home</a>
-      <a href="#" class="selected">Projects</a>
-      <a href="#">About</a>
-    </nav>
-    <div class="main">Content area</div>
+	var text = document.createElementNS(NS, "text");
+	var textPath = document.createElementNS(NS, "textPath");
+	textPath.setAttributeNS("http://www.w3.org/1999/xlink", 'xlink:href', '#circle');
+	textPath.textContent = el.textContent;
+	text.appendChild(textPath);
 
+	svg.appendChild(circle);
+	svg.appendChild(text);
 
-    <h2 class="subpara">市松模様</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex6-8"></div>
-      <div class="ex6-9"></div>
-      <div class="ex6-10"></div>
-      <div class="ex6-11"></div>
-      <div class="ex6-12"></div>
-      <div class="ex6-13"></div>
-      <div class="ex6-14"></div>
-      <div class="ex6-15"></div>
-    </div>
+	el.textContent = '';
+	el.appendChild(svg);
+});
+    </script>
   </body>
 </html>
