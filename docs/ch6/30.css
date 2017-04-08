@@ -1,40 +1,49 @@
-.container > div {
-	display: inline-block;
-	width: 12rem;
-	height: 12rem;
+.container {
+	margin: 1em;
 }
 
-.container img {
-	max-width: 100%;
+button {
+	padding: .3em .5em;
+	border: none;
+	border-radius: 50%;
+	background: #58a;
+	color: white;
+	font: bold 200%/1 sans-serif;
+	cursor: pointer;
+}
+button:hover {
+	background-color: green;
 }
 
-.ex11-2 {
-	transform: rotate(45deg);
-	overflow: hidden;
+.ex30-2 {
+	border: 15px solid transparent;
 }
 
-.ex11-2 > img {
-	transform: rotate(-45deg);
+.ex30-3 {
+	border: 15px solid transparent;
+	background-clip: padding-box;
 }
 
-.ex11-3 {
-	transform: rotate(45deg) scale(0.71);
-	overflow: hidden;
+.ex30-4 {
+	border: 15px solid transparent;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.3) inset;
+	background-clip: padding-box;
 }
 
-.ex11-3 > img {
-	transform: rotate(-45deg) scale(1.42);
+.ex30-5 {
+	border: 15px solid transparent;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.3) inset,
+		0 .2em .4em -.05em rgba(0,0,0,.5);
+	background-clip: padding-box;
 }
 
-.ex11-4 > img {
-	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+.ex30-6 {
+	position: relative;
+	border: 1px solid rgba(0,0,0,.3);
+	box-shadow: 0 .2em .4em -.05em rgba(0,0,0,.5);
 }
-
-.ex11-5 > img {
-	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-	transition: 1s clip-path;
-}
-
-.ex11-5 > img {
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+.ex30-6:before {
+	content: '';
+	position: absolute;
+	top: -15px; right: -15px; bottom: -15px; left: -15px;
 }
