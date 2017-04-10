@@ -11,8 +11,15 @@
     <ul>
       <li><a href="http://lea.verou.me/css3patterns/">CSS3 Patterns Gallery</a></li>
     </ul>
+    <div class="container">
+      <button onclick="showModal1()">show modal #1</button>
+      <div class="ex32-1">
+        <div class="overlay"></div>
+        <div class="lightbox">lightbox<br /><button onclick="hideModal1()">close modal #1</button></div>
+      </div>
+    </div>
 
-    <h2 class="subpara">疑似要素のボーダーを使う</h2>
+    <h2 class="subpara">疑似要素を使う</h2>
     <ul>
       <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
       <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
@@ -20,12 +27,13 @@
     <pre class="code">
       background-position: right bottom;</pre>
     <div class="container">
-      <div class="ex13-1">Trapezoid</div>
-      <div class="ex13-2">Trapezoid</div>
-      <div class="ex13-3">Trapezoid</div>
+      <button onclick="showModal2()">show modal #2</button>
+      <div class="ex32-2">
+        <div class="lightbox">lightbox<br /><button onclick="hideModal2()">close modal #2</button></div>
+      </div>
     </div>
 
-    <h2 class="subpara">水玉模様</h2>
+    <h2 class="subpara">box-shadow を使う</h2>
     <ul>
       <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
       <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
@@ -33,51 +41,34 @@
     <pre class="code">
       background-position: right bottom;</pre>
     <div class="container">
-      <div class="ex13-4">Trapezoid</div>
-      <div class="ex13-5">Trapezoid</div>
-      <div class="ex13-6">Trapezoid</div>
-      <div class="ex13-7">Trapezoid</div>
-      <div class="ex13-8">Trapezoid</div>
+      <button onclick="showModal3()">show modal #3</button>
+      <div class="ex32-3">
+        <div class="lightbox">lightbox<br /><button onclick="hideModal3()">close modal #3</button></div>
+      </div>
     </div>
 
-    <nav class="ex13-9">
-      <a href="#">Home</a>
-      <a href="#" class="selected">Projects</a>
-      <a href="#">About</a>
-    </nav>
-    <div class="main">Content area</div>
-
-    <nav class="ex13-10">
-      <a href="#">Home</a>
-      <a href="#" class="selected">Projects</a>
-      <a href="#">About</a>
-    </nav>
-    <div class="main">Content area</div>
-
-    <nav class="ex13-11">
-      <a href="#">Home</a>
-      <a href="#" class="selected">Projects</a>
-      <a href="#">About</a>
-    </nav>
-    <div class="main">Content area</div>
-
-
-    <h2 class="subpara">市松模様</h2>
+    <h2 class="subpara">::backdrop を使う</h2>
     <ul>
+      <li>LIMIITED SUPPORT</li>
       <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
       <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
     </ul>
     <pre class="code">
       background-position: right bottom;</pre>
     <div class="container">
-      <div class="ex6-8"></div>
-      <div class="ex6-9"></div>
-      <div class="ex6-10"></div>
-      <div class="ex6-11"></div>
-      <div class="ex6-12"></div>
-      <div class="ex6-13"></div>
-      <div class="ex6-14"></div>
-      <div class="ex6-15"></div>
+      <button onclick="showModal4()">show modal #4</button>
+      <dialog class="ex32-4">native modal dialog<br /><button onclick="hideModal4()">close modal #4</button></dialog>
     </div>
+
+    <script>
+      function showModal1() { document.querySelector('.ex32-1').style.display = 'flex'; }
+      function showModal2() { document.querySelector('.ex32-2').style.display = 'flex'; }
+      function showModal3() { document.querySelector('.ex32-3').style.display = 'flex'; }
+      function showModal4() { document.querySelector('.ex32-4').showModal(); }
+      function hideModal1() { document.querySelector('.ex32-1').style.display = 'none'; }
+      function hideModal2() { document.querySelector('.ex32-2').style.display = 'none'; }
+      function hideModal3() { document.querySelector('.ex32-3').style.display = 'none'; }
+      function hideModal4() { this.parentNode.close(); }
+    </script>
   </body>
 </html>
