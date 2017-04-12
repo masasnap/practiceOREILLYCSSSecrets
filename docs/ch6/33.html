@@ -20,64 +20,279 @@
     <pre class="code">
       background-position: right bottom;</pre>
     <div class="container">
-      <div class="ex13-1">Trapezoid</div>
-      <div class="ex13-2">Trapezoid</div>
-      <div class="ex13-3">Trapezoid</div>
+<dialog>O HAI, I’m a dialog. Click on me to dismiss.</dialog>
+<main>
+<button class="ex33-1">Show dialog</button>
+<button class="ex33-2">Show dialog</button>
+<button class="ex33-3">Show dialog</button>
+<button class="ex33-4">Show dialog</button>
+<button class="ex33-5">Show dialog</button>
+<p>Bacon ipsum dolor sit amet consectetur
+ short loin
+ ut
+ tri-tip
+ alcatra
+ ground round
+ jowl
+ beef
+ meatloaf
+ in
+ pork.  Elit
+ chicken
+ ea
+ spare ribs.  Shank
+ andouille
+ ex
+ boudin
+ picanha
+ turkey
+ esse.  Do
+ doner
+ fugiat
+ tongue.</p><p>Pork chop
+ ad
+ cow
+ spare ribs
+ capicola
+ ball tip
+ alcatra
+ cillum
+ magna
+ short ribs
+ tempor.  Pork loin
+ do
+ sint
+ magna
+ ea
+ pork belly
+ duis.  Shoulder
+ ullamco
+ chicken
+ porchetta, ham
+ anim
+ veniam
+ venison.  Fugiat
+ tenderloin
+ venison, turducken
+ non
+ pork chop
+ ribeye
+ enim.  Beef
+ turkey
+ salami, ipsum
+ prosciutto
+ commodo
+ cupidatat.  Tri-tip
+ ham hock
+ non
+ brisket
+ pig
+ cupim commodo
+ ball tip
+ nulla
+ turkey
+ kielbasa
+ corned beef
+ flank.  Hamburger
+ pariatur
+ ham, porchetta
+ cupidatat
+ sirloin
+ pork loin
+ quis
+ nulla
+ culpa
+ tail
+ esse.</p><p>Chuck
+ filet mignon
+ flank
+ pork chop
+ mollit
+ enim
+ veniam
+ sed
+ pork loin
+ aliquip
+ sausage
+ prosciutto
+ in
+ deserunt.  Nostrud
+ porchetta
+ non
+ nulla
+ sunt.  Cupim et
+ velit
+ picanha
+ laborum salami
+ capicola
+ exercitation
+ alcatra
+ sausage
+ cillum
+ shoulder
+ minim
+ esse.  Pig
+ boudin
+ aliquip
+ aute, tail
+ ut
+ cow
+ incididunt
+ short loin
+ aliqua.</p><p>Et
+ dolor
+ occaecat
+ dolore
+ doner
+ shoulder.  Swine
+ pancetta
+ tri-tip
+ irure
+ turducken, kevin
+ est
+ meatball
+ aliqua
+ aute
+ quis
+ ham
+ venison
+ sunt.  Consequat
+ pancetta
+ sint
+ beef
+ turkey.  Fugiat
+ occaecat
+ commodo, short ribs
+ corned beef
+ aliquip
+ elit
+ eiusmod
+ pork belly
+ ut
+ eu
+ tri-tip.  Sint
+ aute
+ picanha
+ proident
+ corned beef
+ ad
+ beef
+ dolore
+ landjaeger.  Laboris
+ est
+ deserunt
+ tempor, bresaola
+ ham hock
+ non
+ brisket
+ frankfurter
+ ad
+ leberkas
+ aute
+ sirloin.  Minim
+ et
+ ribeye
+ shank
+ pork loin
+ sint
+ corned beef
+ ball tip
+ dolor.</p><p>Doner
+ alcatra
+ pastrami
+ pig, strip steak
+ eu
+ in
+ frankfurter
+ occaecat
+ in
+ filet mignon
+ chuck
+ short loin
+ nulla
+ meatloaf.  Adipisicing
+ aliqua
+ kielbasa
+ nulla
+ proident.  Ground round
+ meatloaf
+ kevin, shank
+ adipisicing
+ pork
+ frankfurter
+ t-bone
+ spare ribs
+ cupidatat.  Sed
+ ham
+ non
+ duis
+ enim, in
+ ipsum
+ fugiat
+ est
+ tongue
+ short ribs
+ ad
+ bresaola
+ prosciutto.  Non
+ minim
+ picanha, ad
+ in
+ occaecat
+ fugiat
+ veniam
+ dolor
+ deserunt.</p>
+ </main>
     </div>
 
-    <h2 class="subpara">水玉模様</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex13-4">Trapezoid</div>
-      <div class="ex13-5">Trapezoid</div>
-      <div class="ex13-6">Trapezoid</div>
-      <div class="ex13-7">Trapezoid</div>
-      <div class="ex13-8">Trapezoid</div>
-    </div>
+    <script>
+function $(sel) {
+	return document.querySelector(sel);
+}
 
-    <nav class="ex13-9">
-      <a href="#">Home</a>
-      <a href="#" class="selected">Projects</a>
-      <a href="#">About</a>
-    </nav>
-    <div class="main">Content area</div>
+var dialog = $('dialog');
+var main = $('main');
 
-    <nav class="ex13-10">
-      <a href="#">Home</a>
-      <a href="#" class="selected">Projects</a>
-      <a href="#">About</a>
-    </nav>
-    <div class="main">Content area</div>
+$('.ex33-1').onclick = function() {
+	dialog.setAttribute('open', '');
+}
 
-    <nav class="ex13-11">
-      <a href="#">Home</a>
-      <a href="#" class="selected">Projects</a>
-      <a href="#">About</a>
-    </nav>
-    <div class="main">Content area</div>
+$('.ex33-2').onclick = function() {
+	dialog.setAttribute('open', '');
+	main.classList.add('de-emphasized');
+}
 
+$('.ex33-3').onclick = function() {
+	dialog.setAttribute('open', '');
+	main.classList.add('de-emphasized');
+	main.classList.add('dimming');
+}
 
-    <h2 class="subpara">市松模様</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex6-8"></div>
-      <div class="ex6-9"></div>
-      <div class="ex6-10"></div>
-      <div class="ex6-11"></div>
-      <div class="ex6-12"></div>
-      <div class="ex6-13"></div>
-      <div class="ex6-14"></div>
-      <div class="ex6-15"></div>
-    </div>
+$('.ex33-4').onclick = function() {
+	dialog.setAttribute('open', '');
+	dialog.classList.add('shadow');
+	main.classList.add('de-emphasized');
+}
+
+$('.ex33-5').onclick = function() {
+	dialog.setAttribute('open', '');
+	dialog.classList.add('shadow');
+	main.classList.add('de-emphasized');
+	main.classList.add('shrink');
+}
+
+dialog.onclick = function() {
+	if (dialog.close) {
+		dialog.close();
+	} else {
+		dialog.removeAttribute('open');
+	}
+	dialog.classList.remove('shadow');
+	main.classList.remove('de-emphasized');
+	main.classList.remove('dimming');
+	main.classList.remove('shrink');
+}
+    </script>
   </body>
 </html>
