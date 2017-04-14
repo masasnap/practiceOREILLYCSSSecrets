@@ -46,7 +46,40 @@
     <pre class="code">
       background-position: right bottom;</pre>
     <div class="container">
-      <a class="ex10-2"><div>Click me</div></a>
+      <div class="ex35-5">
+        <img src="http://csssecrets.io/images/adamcatlace-before.jpg" alt="Before" />
+        <img src="http://csssecrets.io/images/adamcatlace.jpg" alt="After" />
+      </div>
+      <div class="ex35-6">
+        <img src="http://csssecrets.io/images/adamcatlace-before.jpg" alt="Before" />
+        <img src="http://csssecrets.io/images/adamcatlace.jpg" alt="After" />
+      </div>
+      <div class="ex35-7">
+        <img src="http://csssecrets.io/images/adamcatlace-before.jpg" alt="Before" />
+        <img src="http://csssecrets.io/images/adamcatlace.jpg" alt="After" />
+      </div>
     </div>
+    <script>
+      function createSlider(className) {
+        // wrap the first image with div.
+        var slider = document.querySelector('.' + className);
+        var div = document.createElement('div');
+        var img = slider.querySelector('img');
+        slider.insertBefore(div, img);
+        div.appendChild(img);
+
+        // create slider.
+        var range = document.createElement('input');
+        range.type = 'range';
+        range.oninput = function() {
+          div.style.width = this.value + '%';
+        };
+        slider.appendChild(range);
+      }
+
+      createSlider('ex35-5');
+      createSlider('ex35-6');
+      createSlider('ex35-7');
+    </script>
   </body>
 </html>
