@@ -1,51 +1,88 @@
-.container > a {
-	display: inline-block;
-	min-width: 1rem;
-	min-height: 1rem;
+.container {
 	margin: 1rem;
-	padding: .5rem 1rem;
-	background: #58a;
-	color: white;
-	text-transform: uppercase;
-	text-decoration: none;
-	font: bold 200%/1 sans-serif;
-	cursor: pointer;
+}
+.container img {
+	width: 15em;
 }
 
-.ex10-1 {
-	transform: skewX(-45deg);
+.ex35-1 {
+	position:relative;
+	display: inline-block;
+}
+.ex35-1 > div {
+	position: absolute;
+	top: 0; bottom: 0; left: 0;
+	width: 50%;
+	overflow: hidden;
+}
+.ex35-1 img {
+	display: block;
 }
 
-.ex10-2 {
-	transform: skewX(-45deg);
+.ex35-2 {
+	position:relative;
+	display: inline-block;
+}
+.ex35-2 > div {
+	position: absolute;
+	top: 0; bottom: 0; left: 0;
+	width: 50%;
+	overflow: hidden;
+	resize: horizontal;
+}
+.ex35-2 img {
+	display: block;
 }
 
-.ex10-2 > div {
-	transform: skewX(45deg);
+.ex35-3 {
+	position:relative;
+	display: inline-block;
 }
-
-a.ex10-3 {
-	position: relative;
-	background-color: transparent;
+.ex35-3 > div {
+	position: absolute;
+	top: 0; bottom: 0; left: 0;
+	width: 50%;
+	max-width: 100%;
+	overflow: hidden;
+	resize: horizontal;
 }
-
-.ex10-3::before {
+.ex35-3 > div:before {
 	content: '';
 	position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
-	background: #58a;
+	right: 0; bottom: 0;
+	width: 12px; height: 12px;
+	background: white;
+	cursor: ew-resize;
+}
+.ex35-3 img {
+	display: block;
 }
 
-a.ex10-4 {
-	position: relative;
-	background-color: transparent;
+.ex35-4 {
+	position:relative;
+	display: inline-block;
 }
-
-.ex10-4::before {
+.ex35-4 > div {
+	position: absolute;
+	top: 0; bottom: 0; left: 0;
+	width: 50%;
+	max-width: 100%;
+	overflow: hidden;
+	resize: horizontal;
+}
+.ex35-4 > div:before {
 	content: '';
 	position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
-	background: #58a;
-	z-index: -1;
-	transform: skew(-45deg);
+	right: 0; bottom: 0;
+	width: 12px; height: 12px;
+	padding: 5px;
+	background: linear-gradient(-45deg, white 50%, transparent 0);
+	background-clip: content-box;
+	cursor: ew-resize;
+	-webkit-filter: drop-shadow(0 0 2px black);
+	filter: drop-shadow(0 0 2px black);
+}
+.ex35-4 img {
+	display: block;
+	user-select: none;
 }
