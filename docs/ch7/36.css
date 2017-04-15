@@ -1,83 +1,39 @@
 .container > div {
+	background: rgba(0,0,0,.1);
+}
+
+figure {
+	padding: 10px;
+	border: 1px solid silver;
+}
+
+.ex36-2 > figure {
+	float: left;
+	max-width: 300px;
+}
+.ex36-2 > p {
+	clear: both;
+}
+
+.ex36-3 {
+	text-align: center;
+}
+.ex36-3 > p {
+	text-align: left;
+}
+.ex36-3 > figure {
 	display: inline-block;
-	min-width: 8rem;
-	min-height: 8rem;
-	background: #fb3;
+	max-width: 300px;
+}
+.ex36-3 > figure > img {
+	max-width: 100%;
 }
 
-.ex9-1 {
-	border-radius: 4rem;
+.ex36-4 > figure {
+	max-width: 300px;
+	max-width: min-content;
+	margin: auto;
 }
-
-.ex9-2 {
-	width: 12rem;
-	border-radius: 4rem;
-}
-
-.ex9-3 {
-	width: 12rem;
-	border-radius: 1.5rem / 1rem;
-}
-
-.ex9-4 {
-	width: 12rem;
-	border-radius: 6rem / 4rem;
-}
-
-.ex9-5 {
-	width: 12rem;
-	height: 10rem;
-	border-radius: 6rem / 4rem;
-}
-
-.ex9-6 {
-	width: 12rem;
-	height: 10rem;
-	border-radius: 50% / 50%;
-}
-
-.ex9-7 {
-	width: 12rem;
-	height: 10rem;
-	border-radius: 50%;
-}
-
-.ex9-8 {
-	width: 12rem;
-	border-radius: 50% / 100% 100% 0 0;
-}
-
-.ex9-9 {
-	width: 12rem;
-	border-radius: 50% / 0 0 100% 100%;
-}
-
-.ex9-10 {
-	width: 12rem;
-	border-radius: 100% 0 0 100% / 50%;
-}
-
-.ex9-11 {
-	width: 12rem;
-	border-radius: 0 100% 100% 0 / 50%;
-}
-
-.ex9-12 {
-	width: 12rem;
-	border-radius: 100% 0 0 0;
-}
-
-.ex9-13 {
-	width: 12rem;
-	border-radius: 0 100% 0 0;
-}
-
-.ex9-14 {
-	width: 12rem;
-	border-radius: 0 0 100% 0;
-}
-
-.ex9-15 {
-	width: 12rem;
-	border-radius: 0 0 0 100%;
+.ex36-4 > figure > img {
+	 max-width: inherit;
 }
