@@ -2,71 +2,73 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>9. flexible ellipses</title>
+    <title>37. taming table column widths</title>
     <link rel="stylesheet" type="text/css" href="../common.css">
-    <link rel="stylesheet" type="text/css" href="09.css">
+    <link rel="stylesheet" type="text/css" href="37.css">
   </head>
   <body>
-    <h1 class="para"><span class="paraNum">9</span> さまざまな楕円形</h1>
+    <h1 class="para"><span class="paraNum">37</span> テーブルの列幅を自在に指定する</h1>
     <ul>
       <li><a href="http://lea.verou.me/css3patterns/">CSS3 Patterns Gallery</a></li>
     </ul>
 
-    <h2 class="subpara">格子模様</h2>
+    <h2 class="subpara">With table-layout: auto</h2>
     <ul>
       <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
       <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
     </ul>
     <pre class="code">
       background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex9-1"></div>
-      <div class="ex9-2"></div>
-    </div>
+    <section class="ex37-1">
+      <div>
+        <table>
+          <tr>
+            <td>If we don't…</td>
+            <td>specify a cell width, they will be assigned one that depends on their contents. Notice how the cell with the more content here is much wider.</td>
+          </tr>
+        </table>
 
-    <h2 class="subpara">楕円形</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex9-3"></div>
-      <div class="ex9-4"></div>
-      <div class="ex9-5"></div>
-    </div>
-    <div class="container">
-      <div class="ex9-6"></div>
-      <div class="ex9-7"></div>
-    </div>
+        <table>
+          <tr>
+            <td>If we don't…</td>
+            <td>specify a cell width, they will be assigned one that depends on their contents. Notice how the cell with the more content here is much wider.</td>
+          </tr>
+          <tr>
+            <td>All rows take part in calculating the widths, not just the first one.</td>
+            <td>Notice how the dimensions here are different than the previous example.</td>
+          </tr>
+        </table>
 
-    <h2 class="subpara">半楕円形</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex9-8"></div>
-      <div class="ex9-9"></div>
-      <div class="ex9-10"></div>
-      <div class="ex9-11"></div>
-    </div>
+        <table>
+          <tr>
+            <td style="width: 500px">If we specify a width, it will not always be followed. I have a width of <code>500px</code>…</td>
+            <td style="width: 1000px">…and I have a width of <code>1000px</code>. Because there's not enough space for <code>1500px</code>, they are reduced proportionally, to 33.3% and 66.6% of the total width.</td>
+          </tr>
+        </table>
 
-    <h2 class="subpara">4分割された楕円形</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex9-12"></div>
-      <div class="ex9-13"></div>
-      <div class="ex9-14"></div>
-      <div class="ex9-15"></div>
-    </div>
+        <table>
+          <tr>
+            <td>If we prevent word wrapping, the table can become so wide it grows beyond its container.</td>
+            <td class="preformatted">…and <code>text-overflow: ellipsis</code> doesn't help either.</td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td>Large images and blocks of code can also cause the same issue.</td>
+            <td><img src="http://lea.verou.me/book/panoramic.jpg" /></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <h2 class="subpara">With table-layout: fixed</h2>
+    <section class="ex37-2">
+      <div></div>
+    </section>
+
+    <script>
+      document.querySelector('.ex37-2 > div').innerHTML = document.querySelector('.ex37-1 > div').innerHTML;
+    </script>
   </body>
 </html>
