@@ -2,17 +2,29 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>9. flexible ellipses</title>
+    <title>38. styling by sibling count</title>
     <link rel="stylesheet" type="text/css" href="../common.css">
-    <link rel="stylesheet" type="text/css" href="09.css">
+    <link rel="stylesheet" type="text/css" href="38.css">
   </head>
   <body>
-    <h1 class="para"><span class="paraNum">9</span> さまざまな楕円形</h1>
+    <h1 class="para"><span class="paraNum">38</span> 兄弟要素の個数にもとづくスタイル指定</h1>
     <ul>
       <li><a href="http://lea.verou.me/css3patterns/">CSS3 Patterns Gallery</a></li>
     </ul>
+    <div class="container">
+      <ul class="ex38-1 items">
+        <li class="item">1<a class="check" href="#"></a></li>
+        <li class="item">2<a class="check" href="#"></a></li>
+        <li class="item">3<a class="check" href="#"></a></li>
+        <li class="item">4<a class="check" href="#"></a></li>
+        <li class="item">5<a class="check" href="#"></a></li>
+        <li class="item">6<a class="check" href="#"></a></li>
+        <li class="item">7<a class="check" href="#"></a></li>
+        <li class="item">8<a class="check" href="#"></a></li>
+      </ul>
+    </div>
 
-    <h2 class="subpara">格子模様</h2>
+    <h2 class="subpara">項目数を指定して選ぶ</h2>
     <ul>
       <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
       <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
@@ -20,11 +32,30 @@
     <pre class="code">
       background-position: right bottom;</pre>
     <div class="container">
-      <div class="ex9-1"></div>
-      <div class="ex9-2"></div>
+      <ul class="ex38-2 items">
+        <li>1<a class="check" href="#"></a></li>
+        <li>2<a class="check" href="#"></a></li>
+        <li>3<a class="check" href="#"></a></li>
+      </ul>
+      <ul class="ex38-2 items">
+        <li>1<a class="check" href="#"></a></li>
+        <li>2<a class="check" href="#"></a></li>
+        <li>3<a class="check" href="#"></a></li>
+        <li>4<a class="check" href="#"></a></li>
+      </ul>
+      <ul class="ex38-2 items">
+        <li>1<a class="check" href="#"></a></li>
+        <li>2<a class="check" href="#"></a></li>
+        <li>3<a class="check" href="#"></a></li>
+        <li>4<a class="check" href="#"></a></li>
+        <li>5<a class="check" href="#"></a></li>
+        <li>6<a class="check" href="#"></a></li>
+        <li>7<a class="check" href="#"></a></li>
+        <li>8<a class="check" href="#"></a></li>
+      </ul>
     </div>
 
-    <h2 class="subpara">楕円形</h2>
+    <h2 class="subpara">項目数の範囲を指定して選ぶ</h2>
     <ul>
       <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
       <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
@@ -32,41 +63,92 @@
     <pre class="code">
       background-position: right bottom;</pre>
     <div class="container">
-      <div class="ex9-3"></div>
-      <div class="ex9-4"></div>
-      <div class="ex9-5"></div>
+      <ul class="ex38-3 items">
+        <li>1<a class="check" href="#"></a></li>
+        <li>2<a class="check" href="#"></a></li>
+        <li>3<a class="check" href="#"></a></li>
+      </ul>
+      <ul class="ex38-3 items">
+        <li>1<a class="check" href="#"></a></li>
+        <li>2<a class="check" href="#"></a></li>
+        <li>3<a class="check" href="#"></a></li>
+        <li>4<a class="check" href="#"></a></li>
+      </ul>
+      <ul class="ex38-3 items">
+        <li>1<a class="check" href="#"></a></li>
+        <li>2<a class="check" href="#"></a></li>
+        <li>3<a class="check" href="#"></a></li>
+        <li>4<a class="check" href="#"></a></li>
+        <li>5<a class="check" href="#"></a></li>
+        <li>6<a class="check" href="#"></a></li>
+        <li>7<a class="check" href="#"></a></li>
+        <li>8<a class="check" href="#"></a></li>
+      </ul>
     </div>
     <div class="container">
-      <div class="ex9-6"></div>
-      <div class="ex9-7"></div>
+      <ul class="ex38-4 items">
+        <li>1<a class="check" href="#"></a></li>
+        <li>2<a class="check" href="#"></a></li>
+        <li>3<a class="check" href="#"></a></li>
+      </ul>
+      <ul class="ex38-4 items">
+        <li>1<a class="check" href="#"></a></li>
+        <li>2<a class="check" href="#"></a></li>
+        <li>3<a class="check" href="#"></a></li>
+        <li>4<a class="check" href="#"></a></li>
+      </ul>
+      <ul class="ex38-4 items">
+        <li>1<a class="check" href="#"></a></li>
+        <li>2<a class="check" href="#"></a></li>
+        <li>3<a class="check" href="#"></a></li>
+        <li>4<a class="check" href="#"></a></li>
+        <li>5<a class="check" href="#"></a></li>
+        <li>6<a class="check" href="#"></a></li>
+        <li>7<a class="check" href="#"></a></li>
+        <li>8<a class="check" href="#"></a></li>
+      </ul>
     </div>
+    <div class="container">
+      <ul class="palette" id="palette">
+        <li>
+          <div class="color-options">
+            <a class="add" href="#palette">Add</a>
+            <a class="delete" href="#palette">Delete</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script>
+function $$(expr, con) { return [].slice.call((con || document).querySelectorAll(expr)); }
 
-    <h2 class="subpara">半楕円形</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex9-8"></div>
-      <div class="ex9-9"></div>
-      <div class="ex9-10"></div>
-      <div class="ex9-11"></div>
-    </div>
+var colors = [
+	'#D6E055', // Agave
+	'#082323', '#E6E2AF', '#A7A37E', '#EFECCA', '#046380', // Sandy stone beach
+   	'#1C171D', '#FEE169', '#CDD452', '#F9722E', '#C9313D', // Sushi Maki
+   	'#2E95A3', '#50B8B4', '#C6FFFA', '#E2FFA8'  // Agave
+   ],
+   palette = document.querySelector('.palette'),
+   template = palette.firstElementChild;
 
-    <h2 class="subpara">4分割された楕円形</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex9-12"></div>
-      <div class="ex9-13"></div>
-      <div class="ex9-14"></div>
-      <div class="ex9-15"></div>
-    </div>
+function addColor(template) {
+	var li = template.cloneNode(true);
+	var color = colors.pop();
+	colors.unshift(color);
+	li.style.background = color;
+	palette.insertBefore(li, template.nextSibling);
+}
+
+palette.onclick = function(evt) {
+	var button = evt.target;
+
+	if (button.className == 'add') {
+		addColor(button.parentNode.parentNode);
+	}
+	else if (button.className == 'delete') {
+		var li = button.parentNode.parentNode;
+		li.parentNode.removeChild(li);
+	}
+}
+    </script>
   </body>
 </html>
