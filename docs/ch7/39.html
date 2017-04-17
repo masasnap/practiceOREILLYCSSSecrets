@@ -2,17 +2,17 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>9. flexible ellipses</title>
+    <title>39. fluid background, fixed content</title>
     <link rel="stylesheet" type="text/css" href="../common.css">
-    <link rel="stylesheet" type="text/css" href="09.css">
+    <link rel="stylesheet" type="text/css" href="39.css">
   </head>
   <body>
-    <h1 class="para"><span class="paraNum">9</span> さまざまな楕円形</h1>
+    <h1 class="para"><span class="paraNum">39</span> 流動的な幅の背景と固定幅のコンテンツ</h1>
     <ul>
       <li><a href="http://lea.verou.me/css3patterns/">CSS3 Patterns Gallery</a></li>
     </ul>
 
-    <h2 class="subpara">格子模様</h2>
+    <h2 class="subpara">セクションごとに要素を2つずつ用意する方法</h2>
     <ul>
       <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
       <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
@@ -20,11 +20,35 @@
     <pre class="code">
       background-position: right bottom;</pre>
     <div class="container">
-      <div class="ex9-1"></div>
-      <div class="ex9-2"></div>
+      <div class="ex39-1">
+        <div class="header">
+          <div class="wrapper">
+            <h1>Fluid background, <br />fixed content</h1>
+          </div>
+        </div>
+        <div class="section">
+          <div class="wrapper">
+            <h1>Heading</h1>
+            <p>Bacon ipsum dolor amet voluptate et shoulder, ipsum flank tongue exercitation commodo sed beef ribs drumstick in venison laborum. Laboris ut enim id drumstick, et aute esse. Consequat ad kielbasa anim pork loin turkey qui cupidatat drumstick doner labore. Nulla sirloin jerky do sed magna meatloaf. Ribeye ea ut elit leberkas laboris sausage corned beef drumstick cillum non.</p>
+          </div>
+        </div>
+        <div class="section">
+          <div class="wrapper">
+            <h1>Another heading</h1>
+            <p>Nostrud landjaeger cillum beef cow tail cupidatat non mollit voluptate jowl. Enim sunt in, flank hamburger proident qui. Id aute excepteur chuck magna tempor ipsum pork chop t-bone. Frankfurter meatball pork loin beef et leberkas pork. Pig ball tip pancetta in.</p>
+            <p>Ribeye in veniam ipsum flank. Elit incididunt t-bone proident meatball. Porchetta exercitation prosciutto sausage chuck ut eu brisket shank pastrami turkey sunt laboris tenderloin anim. Landjaeger do venison laboris kevin.</p>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="wrapper">
+            <p>&copy; 2015 Lea Verou (j/k, feel free to use wherever)</p>
+            <p>Consectetur et t-bone pork loin. Tri-tip cupim in, spare ribs velit exercitation in. Tempor cillum fugiat, nisi leberkas reprehenderit anim laboris proident cow. Eu fatback kevin sint, ad shoulder in venison picanha. Sausage drumstick capicola, culpa boudin pork belly minim aute ipsum biltong picanha venison nulla adipisicing.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <h2 class="subpara">楕円形</h2>
+    <h2 class="subpara">無駄なマークアップを避ける方法</h2>
     <ul>
       <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
       <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
@@ -32,41 +56,24 @@
     <pre class="code">
       background-position: right bottom;</pre>
     <div class="container">
-      <div class="ex9-3"></div>
-      <div class="ex9-4"></div>
-      <div class="ex9-5"></div>
-    </div>
-    <div class="container">
-      <div class="ex9-6"></div>
-      <div class="ex9-7"></div>
-    </div>
-
-    <h2 class="subpara">半楕円形</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex9-8"></div>
-      <div class="ex9-9"></div>
-      <div class="ex9-10"></div>
-      <div class="ex9-11"></div>
-    </div>
-
-    <h2 class="subpara">4分割された楕円形</h2>
-    <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
-    </ul>
-    <pre class="code">
-      background-position: right bottom;</pre>
-    <div class="container">
-      <div class="ex9-12"></div>
-      <div class="ex9-13"></div>
-      <div class="ex9-14"></div>
-      <div class="ex9-15"></div>
+      <div class="ex39-2">
+        <div class="header">
+          <h1>Fluid background, <br />fixed content</h1>
+        </div>
+        <div class="section">
+          <h1>Heading</h1>
+          <p>Bacon ipsum dolor amet voluptate et shoulder, ipsum flank tongue exercitation commodo sed beef ribs drumstick in venison laborum. Laboris ut enim id drumstick, et aute esse. Consequat ad kielbasa anim pork loin turkey qui cupidatat drumstick doner labore. Nulla sirloin jerky do sed magna meatloaf. Ribeye ea ut elit leberkas laboris sausage corned beef drumstick cillum non.</p>
+        </div>
+        <div class="section">
+          <h1>Another heading</h1>
+          <p>Nostrud landjaeger cillum beef cow tail cupidatat non mollit voluptate jowl. Enim sunt in, flank hamburger proident qui. Id aute excepteur chuck magna tempor ipsum pork chop t-bone. Frankfurter meatball pork loin beef et leberkas pork. Pig ball tip pancetta in.</p>
+          <p>Ribeye in veniam ipsum flank. Elit incididunt t-bone proident meatball. Porchetta exercitation prosciutto sausage chuck ut eu brisket shank pastrami turkey sunt laboris tenderloin anim. Landjaeger do venison laboris kevin.</p>
+        </div>
+        <div class="footer">
+          <p>&copy; 2015 Lea Verou (j/k, feel free to use wherever)</p>
+          <p>Consectetur et t-bone pork loin. Tri-tip cupim in, spare ribs velit exercitation in. Tempor cillum fugiat, nisi leberkas reprehenderit anim laboris proident cow. Eu fatback kevin sint, ad shoulder in venison picanha. Sausage drumstick capicola, culpa boudin pork belly minim aute ipsum biltong picanha venison nulla adipisicing.</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
