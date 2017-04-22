@@ -1,40 +1,21 @@
 .container > div {
 	display: inline-block;
-	width: 12rem;
-	height: 12rem;
 }
 
-.container img {
-	max-width: 100%;
+.loader {
+	width: 100px; height: 100px;
+	text-indent: 200%; white-space: nowrap; overflow: hidden; /* Hide text */
+	background: url(http://dabblet.com/img/loader.png) 0 0;
 }
 
-.ex11-2 {
-	transform: rotate(45deg);
-	overflow: hidden;
+@keyframes loader {
+	to { background-position: -800px 0; }
 }
 
-.ex11-2 > img {
-	transform: rotate(-45deg);
+.ex43-2 .loader {
+	animation: loader 1s infinite linear;
 }
 
-.ex11-3 {
-	transform: rotate(45deg) scale(0.71);
-	overflow: hidden;
-}
-
-.ex11-3 > img {
-	transform: rotate(-45deg) scale(1.42);
-}
-
-.ex11-4 > img {
-	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-}
-
-.ex11-5 > img {
-	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-	transition: 1s clip-path;
-}
-
-.ex11-5 > img {
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+.ex43-3 .loader {
+	animation: loader 1s infinite steps(8);
 }
