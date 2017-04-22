@@ -1,10 +1,38 @@
-.ex42-1 {
+.bounce {
+	display: inline-block;
 	background: linear-gradient(skyblue, white 225px, yellowgreen 0);
 	min-height: 250px;
 	width: 250px;
 }
+.ball {
+	width: 0; height: 0; padding: 1em;
+	border-radius: 50%;
+	margin: auto;
+	background: red radial-gradient(at 30% 30%, #fdd, red);
+}
 
-@keyframes bounce {
+@keyframes bounce1 {
+	60%, 80%, to { transform: translateY(200px); }
+	70% { transform: translateY(150px); }
+	90% { transform: translateY(180px); }
+}
+.ex42-1 .ball {
+	animation: bounce1 2s forwards;
+}
+
+@keyframes bounce2 {
+	60%, 80%, to {
+		transform: translateY(200px);
+		animation-timing-function: ease-out;
+	}
+	70% { transform: translateY(150px); }
+	90% { transform: translateY(180px); }
+}
+.ex42-2 .ball {
+	animation: bounce2 2s ease-in forwards;
+}
+
+@keyframes bounce3 {
 	60%, 80%, to {
 		transform: translateY(200px);
 		animation-timing-function: ease;
@@ -12,37 +40,34 @@
 	70% { transform: translateY(150px); }
 	90% { transform: translateY(180px); }
 }
-
-.ex42-1 .ball {
-	width: 0; height: 0; padding: 1em;
-	border-radius: 50%;
-	margin: auto;
-	background: red radial-gradient(at 30% 30%, #fdd, red);
-	animation: bounce 2s cubic-bezier(.1,.25,1,.25) forwards;
+.ex42-3 .ball {
+	animation: bounce3 2s cubic-bezier(.1,.25,1,.25) forwards;
 }
 
-.ex42-5 {
+@keyframes bounce4 {
+	60%, 80%, to {
+		transform: translateY(200px);
+		animation-timing-function: cubic-bezier(.215,.61,.355,1);
+	}
+	70% { transform: translateY(150px); }
+	90% { transform: translateY(180px); }
+}
+.ex42-4 .ball {
+	animation: bounce4 2s cubic-bezier(.755,.05,.855,.06) forwards;
+}
+
+
+.elastic {
+	display: inline-block;
 	padding: 0 1.5em 5em;
-	font: 200%/1.6 Baskerville, serif;
+	font: 120%/1.6 Baskerville, serif;
 }
-
-.ex42-5 input {
+.elastic input {
 	display: block;
 	padding: 0 .4em;
 	font: inherit;
 }
-
-.ex42-5 input:not(:focus) + .callout:not(:hover) {
-	transform: scale(0);
-	transition: .25s transform;
-}
-
-.ex42-5 .callout {
-	transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
-	transform-origin: 1.4em -.4em;
-}
-
-.ex42-5 .callout {
+.elastic .callout {
 	position: absolute;
 	max-width: 14em;
 	padding: .6em .8em;
@@ -53,8 +78,7 @@
 	box-shadow: .05em .2em .6em rgba(0,0,0,.2);
 	font-size: 75%;
 }
-
-.ex42-5 .callout:before {
+.elastic .callout:before {
 	content: "";
 	position: absolute;
 	top: -.4em;
@@ -65,4 +89,64 @@
 	border-right: 0;
 	border-bottom: 0;
 	transform: rotate(45deg);
+}
+
+.ex42-5 input:not(:focus) + .callout:not(:hover) {
+	transform: scale(0);
+}
+.ex42-5 .callout {
+	transition: .5s transform;
+	transform-origin: 1.4em -.4em;
+}
+
+@keyframes elastic-grow6 {
+	from { transform: scale(0); }
+	70% {
+		transform: scale(1.1);
+		animation-timing-function: cubic-bezire(.1,.25,1,.25);
+	}
+}
+.ex42-6 input:not(:focus) + .callout:not(:hover) {
+	transform: scale(0);
+}
+.ex42-6 input:focus + .callout {
+	animation: elastic-grow6 .5s;
+}
+.ex42-6 .callout {
+	transform-origin: 1.4em -.4em;
+}
+
+.ex42-7 input:not(:focus) + .callout:not(:hover) {
+	transform: scale(0);
+}
+.ex42-7 .callout {
+	transition: .5s cubic-bezier(.25,.1,.3,1.5);
+	transform-origin: 1.4em -.4em;
+}
+
+.ex42-8 input:not(:focus) + .callout:not(:hover) {
+	transform: scale(0);
+	transition-timing-function: ease;
+}
+.ex42-8 .callout {
+	transition: .5s cubic-bezier(.25,.1,.3,1.5);
+	transform-origin: 1.4em -.4em;
+}
+
+.ex42-9 input:not(:focus) + .callout:not(:hover) {
+	transform: scale(0);
+	transition: .25s;
+}
+.ex42-9 .callout {
+	transition: .5s cubic-bezier(.25,.1,.3,1.5);
+	transform-origin: 1.4em -.4em;
+}
+
+.ex42-10 input:not(:focus) + .callout:not(:hover) {
+	transform: scale(0);
+	transition: .25s transform;
+}
+.ex42-10 .callout {
+	transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
+	transform-origin: 1.4em -.4em;
 }
