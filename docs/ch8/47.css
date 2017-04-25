@@ -1,3 +1,7 @@
+.container > div {
+	display: inline-block;
+}
+
 .path {
 	width: 150px; height: 150px;
 	padding: 10px;
@@ -5,6 +9,7 @@
 	background: #fb3;
 }
 .avatar {
+	display: block;
 	width: 50px;
 	margin: 0 auto;
 	border-radius: 50%;
@@ -16,22 +21,131 @@
 }
 
 
-@keyframes spin1 {
+@keyframes spin2 {
 	to { transform: rotate(1turn); }
 }
-.ex47-1 .avatar {
-	margin: 0 auto;
-
-	animation: spin1 3s infinite linear;
+.ex47-2 .avatar {
+	animation: spin2 3s infinite linear;
 	transform-origin: 50% 75px;
 }
-.ex47-1 .avatar > img {
+
+@keyframes spin3 {
+	to { transform: rotate(1turn); }
+}
+@keyframes spin-reverse3 {
+	from { transform: rotate(1turn); }
+}
+.ex47-3 .avatar {
+	animation: spin3 3s infinite linear;
+	transform-origin: 50% 75px;
+}
+.ex47-3 .avatar > img {
+	animation: spin-reverse3 3s infinite linear;
+}
+
+@keyframes spin4 {
+	to { transform: rotate(1turn); }
+}
+@keyframes spin-reverse4 {
+	from { transform: rotate(1turn); }
+}
+.ex47-4 .avatar {
+	animation: spin4 3s infinite linear;
+	transform-origin: 50% 75px;
+}
+.ex47-4 .avatar > img {
+	animation: inherit;
+	animation-name: spin-reverse4;
+}
+
+@keyframes spin5 {
+	to { transform: rotate(1turn); }
+}
+.ex47-5 .avatar {
+	animation: spin5 3s infinite linear;
+	transform-origin: 50% 75px;
+}
+.ex47-5 .avatar > img {
 	animation: inherit;
 	animation-direction: reverse;
 }
 
 
-@keyframes spin5 {
+@keyframes spin6 {
+	from {
+		transform: translate(50%, 75px)
+			rotate(0turn)
+			translate(-50%, -75px);
+	}
+	to {
+		transform: translate(50%, 75px)
+			rotate(1turn)
+			translate(-50%, -75px);
+	}
+}
+@keyframes spin-reverse6 {
+	from {
+		transform: translate(50%, 50%)
+			rotate(1turn)
+			translate(-50%, -50%);
+	}
+	to {
+		transform: translate(50%, 50%)
+			rotate(0turn)
+			translate(-50%, -50%);
+	}
+}
+.ex47-6 .avatar {
+	animation: spin6 3s infinite linear;
+	transform-origin: 0 0;
+}
+.ex47-6 .avatar > img {
+	animation: inherit;
+	animation-name: spin-reverse6;
+	transform-origin: 0 0;
+}
+
+@keyframes spin7 {
+	from {
+		transform: translate(50%, 75px)
+			rotate(0turn)
+			translate(-50%, -75px)
+			translate(50%, 50%)
+			rotate(1turn)
+			translate(-50%, -50%);
+	}
+	to {
+		transform: translate(50%, 75px)
+			rotate(1turn)
+			translate(-50%, -75px)
+			translate(50%, 50%)
+			rotate(0turn)
+			translate(-50%, -50%);
+	}
+}
+.ex47-7 .avatar {
+	animation: spin7 3s infinite linear;
+}
+
+@keyframes spin8 {
+	from {
+		transform: translateY(75px) translateY(-50%)
+			rotate(0turn)
+			translateY(-75px) translateY(50%)
+			rotate(1turn);
+	}
+	to {
+		transform: translateY(75px) translateY(-50%)
+			rotate(1turn)
+			translateY(-75px) translateY(50%)
+			rotate(0turn);
+	}
+}
+.ex47-8 .avatar {
+	animation: spin8 3s infinite linear;
+}
+
+@keyframes spin9 {
 	from {
 		transform: rotate(0turn)
 			translateY(-75px) translateY(50%)
@@ -43,12 +157,8 @@
 			rotate(0turn);
 	}
 }
-.ex47-5 .avatar {
-	display: block;
+.ex47-9 .avatar {
 	margin: calc(50% - 25px) auto 0;
 
-	animation: spin5 3s infinite linear;
-}
-.ex47-5 .path {
-	margin: 50px auto;
+	animation: spin9 3s infinite linear;
 }
