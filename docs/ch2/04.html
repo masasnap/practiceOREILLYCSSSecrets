@@ -9,24 +9,45 @@
   <body>
     <h1 class="para"><span class="paraNum">4</span> 角の内側を丸める</h1>
     <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
+      <li>ボーダーの外側は直角のままで、内側だけを丸めたいケース。</li>
+      <li>要素を２つ追加すれば表示可能だが、本質的には要素は１つあれば十分なはず。</li>
     </ul>
     <pre class="code">
-      background-position: right bottom;</pre>
+      .ex4-1 {
+        background: #655;
+        padding: .8rem;
+      }
+      .ex4-1 > div {
+        background: tan;
+        border-radius: .8rem;
+        padding: 1rem;
+        max-width: 9rem;
+      }</pre>
     <div class="container">
       <div class="ex4-1"><div>I have a nice subtle inner rounding, don't I look pretty?</div></div>
     </div>
 
     <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
+      <li>「ボーダー」が単色でよい場合には、１つの要素だけで済ませられる（ハックがある）。</li>
+      <li>outline で要素の丸めを無視し、box-shadow で隙間を埋める。</li>
     </ul>
     <pre class="code">
-      background-position: right bottom;</pre>
+        outline: .6rem solid #655;
+        box-shadow: 0 0 0 .4rem #655;
+        border-radius: .8rem;
+        padding: 1rem;
+        background: tan;</pre>
     <div class="container">
       <div class="ex4-2">I have a nice subtle inner rounding, don't I look pretty?</div>
     </div>
+    <ul>
+      <li>補足</li>
+      <ul>
+        <li>outline だけを表示すると、下左図のように（現状のレンダリングエンジンでは）角の丸めが反映されない。</li>
+        <li>box-shadow でオフセットもぼかしもない影を設定すると、下中央図のように角の丸めが反映される。</li>
+        <li>両者を合わせると、下右図のように目的の表示が得られる。</li>
+      </ul>
+    </ul>
     <div class="container">
       <div class="ex4-3">I have a nice subtle inner rounding, don't I look pretty?</div>
       <div class="ex4-4">I have a nice subtle inner rounding, don't I look pretty?</div>
