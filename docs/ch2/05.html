@@ -11,14 +11,27 @@
 
     <h2 class="subpara">横のストライプ</h2>
     <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
+      <li>まず、#fb3 から #58a への縦方向の線形グラデーションを用意する。</li>
     </ul>
     <pre class="code">
-      background-position: right bottom;</pre>
+      background: linear-gradient(#fb3, #58a);</pre>
     <div class="container">
       <div class="ex5-1"></div>
+    </div>
+    <ul>
+      <li>linear-gradient() では、以下のようにカラーストップの位置を指定可能。</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(#fb3 20%, #58a 80%);</pre>
+    <div class="container">
       <div class="ex5-2"></div>
+    </div>
+    <ul>
+      <li>カラーストップをまったく同じ位置に指定すると、グラデーションではなくなる。</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(#fb3 50%, #58a 50%);</pre>
+    <div class="container">
       <div class="ex5-3"></div>
       <div class="ex5-4"></div>
       <div class="ex5-5"></div>
