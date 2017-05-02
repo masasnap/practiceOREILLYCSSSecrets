@@ -11,41 +11,69 @@
 
     <h2 class="subpara">横のストライプ</h2>
     <ul>
-      <li>まず、#fb3 から #58a への縦方向の線形グラデーションを用意する。</li>
+      <li>まず、#fb3 から #58a への縦方向の線形グラデーションを用意する（下左図）。</li>
     </ul>
     <pre class="code">
       background: linear-gradient(#fb3, #58a);</pre>
-    <div class="container">
-      <div class="ex5-1"></div>
-    </div>
     <ul>
-      <li>linear-gradient() では、以下のようにカラーストップの位置を指定可能。</li>
+      <li>linear-gradient() では、以下のようにカラーストップの位置を指定可能。（下中央図）</li>
     </ul>
     <pre class="code">
       background: linear-gradient(#fb3 20%, #58a 80%);</pre>
-    <div class="container">
-      <div class="ex5-2"></div>
-    </div>
     <ul>
-      <li>カラーストップをまったく同じ位置に指定すると、グラデーションではなくなる。</li>
+      <li>カラーストップをまったく同じ位置に指定すると、グラデーションではなくなる。（下右図）</li>
     </ul>
     <pre class="code">
       background: linear-gradient(#fb3 50%, #58a 50%);</pre>
     <div class="container">
+      <div class="ex5-1"></div>
+      <div class="ex5-2"></div>
       <div class="ex5-3"></div>
+    </div>
+    <ul>
+      <li>このグラデーションは背景画像と同等に扱えるため、background-size でサイズ変更が可能。背景画像は繰り返し表示されるため、コンテナ全体にストライプが表示される。（下左図）</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(#fb3 50%, #58a 50%);
+      background-size: 100% 2rem;</pre>
+    <ul>
+      <li>同じカラーストップの値を繰り返し記述する代わりに、2つ目の色のカラーストップをゼロに指定すると1つ目と一致するように位置が調整される。（下中央図）</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(#fb3 50%, #58a 0);
+      background-size: 100% 2rem;</pre>
+    <ul>
+      <li>カラーストップの位置を50%から変えると、幅の異なるストライプを生成可能。（下右図）</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(#fb3 30%, #58a 0);
+      background-size: 100% 2rem;</pre>
+    <div class="container">
       <div class="ex5-4"></div>
       <div class="ex5-5"></div>
       <div class="ex5-6"></div>
+    </div>
+    <ul>
+      <li>3色以上のストライプも、次のように簡単に作成可能。</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(#fb3 33.3%, #58a 0, #58a 66.6%, yellowgreen 0);
+      background-size: 100% 3rem;</pre>
+    <div class="container">
       <div class="ex5-7"></div>
     </div>
 
     <h2 class="subpara">縦のストライプ</h2>
     <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
+      <li>縦ストライプのためのコードは横のストライプと同じだが、グラデーションの方向を表すパラメータ（"to right" というキーワード、または、90deg）を追加している。</li>
       <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
     </ul>
     <pre class="code">
-      background-position: right bottom;</pre>
+      background: linear-gradient(to right, #fb3 50%, #58a 0);
+      background-size: 2rem 100%;</pre>
+    <pre class="code">
+      background: linear-gradient(90deg, #fb3 50%, #58a 0);
+      background-size: 2rem 100%;</pre>
     <div class="container">
       <div class="ex5-8"></div>
       <div class="ex5-9"></div>
@@ -53,17 +81,56 @@
 
     <h2 class="subpara">斜めのストライプ</h2>
     <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
+      <li>"90deg" の指定で縦のストライプを生成できたので、45度の斜めのストライプは "45deg" を指定すればよいと思われるかもしれない。しかし、これは機能しない。（下左図）</li>
+      <li>これは、グラデーションの単位となるタイルを個別に回転しているだけで、背景全体が回転しているわけではないから。</li>
     </ul>
     <pre class="code">
-      background-position: right bottom;</pre>
+      background: linear-gradient(45deg, #fb3 50%, #58a 0);
+      background-size: 2rem 2rem;</pre>
     <div class="container">
       <div class="ex5-10"></div>
+    </div>
+    <ul>
+      <li>１つのタイルの中に、4つのストライプを指定すれば、斜めのストライプにはなる。しかし、横や縦のストライプよりも線幅が狭い。（下右図）</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+      background-size: 2rem 2rem;</pre>
+    <div class="container">
       <div class="ex5-11"></div>
+    </div>
+    <ul>
+      <li>background-size はタイルの斜辺の長さに対応するので、ピタゴラスの定理より目的のストライプの幅の2√2の値を指定すればよいということになる（下左図）</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+      background-size: 2.828427rem 2.828427rem;</pre>
+    <ul>
+      <li>有限小数は正確に表現不可能なので、小数点以下は丸めてシンプルことを推奨。（下右図）</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+      background-size: 2.8rem 2.8rem;</pre>
+    <div class="container">
       <div class="ex5-12"></div>
       <div class="ex5-13"></div>
+    </div>
+    <ul>
+      <li>上記のストライプ指定方法は、柔軟ではない。たとえば45度ではなく60度など他の角度を指定すると、ひどい結果になってしまう。（下図）</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(60deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+      background-size: 2.8rem 2.8rem;</pre>
+    <div class="container">
       <div class="ex5-14"></div>
+    </div>
+    <ul>
+      <li>上記のストライプ指定方法は、柔軟ではない。たとえば45度ではなく60度など他の角度を指定すると、ひどい結果になってしまう。（下左図）</li>
+    </ul>
+    <pre class="code">
+      background: linear-gradient(60deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+      background-size: 2.8rem 2.8rem;</pre>
+    <div class="container">
       <div class="ex5-15"></div>
       <div class="ex5-16"></div>
       <div class="ex5-17"></div>
