@@ -1,3 +1,7 @@
+.container {
+	margin: 0 2rem;
+}
+
 .container > div {
 	display: inline-block;
 	min-width: 8rem;
