@@ -125,13 +125,35 @@
       <div class="ex5-14"></div>
     </div>
     <ul>
-      <li>上記のストライプ指定方法は、柔軟ではない。たとえば45度ではなく60度など他の角度を指定すると、ひどい結果になってしまう。（下左図）</li>
+      <li>linear-gradient() には繰り返し表示するための repeating-linear-gradient() がある。</li>
+      <li>これを使うと以下のように記述する代わりに、
+        <pre class="code">
+      background: linear-gradient(45deg, #fb3, #58a 20px, #58a 0, #fb3 40px, #fb3 0, #58a 60px, ...);</pre>
+        以下のように記述できる。（下左図）
+        <pre class="code">
+      background: repeating-linear-gradient(45deg, #fb3, #58a 20px);</pre>
+      </li>
     </ul>
-    <pre class="code">
-      background: linear-gradient(60deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
-      background-size: 2.8rem 2.8rem;</pre>
     <div class="container">
       <div class="ex5-15"></div>
+    </div>
+    <ul>
+      <li>45度のストライプを繰り返しのグラデーションを使うと次のように記述できる。（下左図）</li>
+    </ul>
+    <pre class="code">
+      background: repeating-linear-gradient(45deg, #fb3, #fb3 10px, #58a 0, #58a 20px);</pre>
+    <ul>
+      <li>さらにこの記述では、任意の角度を指定可能。（下中央図）</li>
+    </ul>
+    <pre class="code">
+      background: repeating-linear-gradient(60deg, #fb3, #fb3 10px, #58a 0, #58a 20px);</pre>
+    <ul>
+      <li>ストライプの線幅も考慮すると、45度の斜めのストライプは以下のように記述可能。（下右図）</li>
+    </ul>
+    <pre class="code">
+      background: repeating-linear-gradient(45deg, #fb3 0, #fb3 25%, #58a 0, #58a 50%);
+      background-size: 2.8rem 2.8rem;</pre>
+    <div class="container">
       <div class="ex5-16"></div>
       <div class="ex5-17"></div>
       <div class="ex5-18"></div>
@@ -139,11 +161,16 @@
 
     <h2 class="subpara">明るさを変えたストライプ</h2>
     <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
+      <li>異なる色のストライプではなく、同じ色で明るさだけが異なる次のようなストライプを考える。（下左図）</li>
     </ul>
     <pre class="code">
-      background-position: right bottom;</pre>
+      background-image: repeating-linear-gradient(30deg, #79b, #79b 10px, #58a 0, #58a 20px);</pre>
+    <ul>
+      <li>暗い方の色を背景色にし、半透明の白のストライプを重ねることで、可読性と柔軟性を向上できる。（下右図）</li>
+    </ul>
+    <pre class="code">
+      background: #58a;
+      background-image: repeating-linear-gradient(30deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.1) 10px, transparent 0, transparent 20px);</pre>
     <div class="container">
       <div class="ex5-19"></div>
       <div class="ex5-20"></div>
