@@ -9,31 +9,64 @@
   <body>
     <h1 class="para"><span class="paraNum">6</span> 複雑な背景のパターン</h1>
     <ul>
-      <li><a href="http://lea.verou.me/css3patterns/">CSS3 Patterns Gallery</a></li>
+      <li><a href="http://lea.verou.me/css3patterns/">CSS3 Patterns Gallery</a> では、2011年時点のグラデーションで実現可能な機能を紹介している。</li>
+      <li>以下では、比較的作りやすく使いやすいものをピックアップする。</li>
     </ul>
 
     <h2 class="subpara">格子模様</h2>
     <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
+      <li>縦（下左図）と横（下中央図）のストライプを組み合わせることで、格子模様が作れる（下右図）</li>
     </ul>
     <pre class="code">
-      background-position: right bottom;</pre>
+      background: white;
+      background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 0),
+      		linear-gradient(rgba(200,0,0,.5) 50%, transparent 0);
+      background-size: 30px 30px;</pre>
     <div class="container">
       <div class="ex6-1"></div>
       <div class="ex6-2"></div>
       <div class="ex6-3"></div>
+    </div>
+    <ul>
+      <li>線の幅を一定に保ちたい場合は、カラーストップの位置として%値ではなく長さを指定する（下左図）。</li>
+    </ul>
+    <pre class="code">
+      background: #58a;
+      background-image: linear-gradient(white 1px, transparent 0),
+      		linear-gradient(90deg, white 1px, transparent 0);
+      background-size: 30px 30px;</pre>
+    <ul>
+      <li>更に幅や色の異なる線を組み合わせると、よりリアルな格子を作成できる（下右図）。</li>
+    </ul>
+    <pre class="code">
+      background: #58a;
+      background-image: linear-gradient(white 2px, transparent 0),
+      		linear-gradient(90deg, white 2px, transparent 0),
+      		linear-gradient(hsla(0,0%,100%,.3) 1px, transparent 0),
+      		linear-gradient(90deg, hsla(0,0%,100%,.3) 1px, transparent 0);
+      background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;</pre>
+    <div class="container">
       <div class="ex6-4"></div>
       <div class="ex6-5"></div>
     </div>
 
     <h2 class="subpara">水玉模様</h2>
     <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
+      <li>円形グラデーションを使うと、ドットが表現できる（下左図）。</li>
     </ul>
     <pre class="code">
-      background-position: right bottom;</pre>
+      background: #655;
+      background-image: radial-gradient(tan 30%, transparent 0);
+      background-size: 30px 30px;</pre>
+    <ul>
+      <li>同じグラデーションを2つ組み合わせると、綺麗な水玉模様が表現できる（下右図）。</li>
+    </ul>
+    <pre class="code">
+      background: #655;
+      background-image: radial-gradient(tan 30%, transparent 0),
+      	radial-gradient(tan 30%, transparent 0);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;</pre>
     <div class="container">
       <div class="ex6-6"></div>
       <div class="ex6-7"></div>
@@ -41,15 +74,33 @@
 
     <h2 class="subpara">市松模様</h2>
     <ul>
-      <li>CSS2.1では背景画像のオフセットは左上基点かキーワード指定しかできない。</li>
-      <li>さらに、キーワード指定では端から間隔を空けられなかった。</li>
+      <li>1つのCSSグラデーションでは、余白のある四角形は作成できない。</li>
+      <li>そこで、直角三角形を組み合わせて四角形を表示する。</li>
+      <li>直角三角形は以下のように作成できる（下左図）。</li>
     </ul>
     <pre class="code">
-      background-position: right bottom;</pre>
+      background: #eee;
+      background-image: linear-gradient(45deg, #bbb 50%, transparent 0);
+      background-size: 30px 30px;</pre>
+    <ul>
+      <li>カラーストップの位置を50%から25%にすると、下中央図のようになる。カラーストップの位置を反転させると、下右図のようになる。</li>
+    </ul>
     <div class="container">
       <div class="ex6-8"></div>
       <div class="ex6-9"></div>
       <div class="ex6-10"></div>
+    </div>
+    <ul>
+      <li>2つのグラデーションを組み合わせると、下左図のようになる。</li>
+      <li>2つ目のグラデーションの位置をずらし、それぞれの三角形を組み合わせて四角形にする。（下中央図）</li>
+    </ul>
+    <pre class="code">
+      background: #eee;
+      background-image: linear-gradient(45deg, #bbb 25%, transparent 0),
+      	linear-gradient(45deg, transparent 75%, #bbb 0);
+      background-position: 0 0, 15px 15px;
+      background-size: 30px 30px;</pre>
+    <div class="container">
       <div class="ex6-11"></div>
       <div class="ex6-12"></div>
       <div class="ex6-13"></div>
