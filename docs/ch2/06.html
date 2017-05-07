@@ -100,11 +100,49 @@
       	linear-gradient(45deg, transparent 75%, #bbb 0);
       background-position: 0 0, 15px 15px;
       background-size: 30px 30px;</pre>
+    <ul>
+      <li>このグラデーションをもう1組用意すると、下右図のようになる。</li>
+    </ul>
+    <pre class="code">
+      background: #eee;
+      background-image: linear-gradient(45deg, #bbb 25%, transparent 0),
+      	linear-gradient(45deg, transparent 75%, #bbb 0),
+      	linear-gradient(45deg, #bbb 25%, transparent 0),
+      	linear-gradient(45deg, transparent 75%, #bbb 0);
+      background-position: 0 0, 15px 15px, 15px 15px, 30px 30px;
+      background-size: 30px 30px;</pre>
     <div class="container">
       <div class="ex6-11"></div>
       <div class="ex6-12"></div>
       <div class="ex6-13"></div>
+    </div>
+    <ul>
+      <li>反対向きの2つの三角形（1&amp;4個目、2&amp;3個目）をそれぞれ1つのlinear-gradientにまとめると、下図のようになる。</li>
+    </ul>
+    <pre class="code">
+      background: #eee;
+      background-image: linear-gradient(45deg,
+      		rgba(0,0,0,.25) 25%, transparent 0,
+      		transparent 75%, rgba(0,0,0,.25) 0),
+      	linear-gradient(45deg,
+      		rgba(0,0,0,.25) 25%, transparent 0,
+      		transparent 75%, rgba(0,0,0,.25) 0);
+      background-position: 0 0, 15px 15px;
+      background-size: 30px 30px;</pre>
+    <div class="container">
       <div class="ex6-14"></div>
+    </div>
+    <ul>
+      <li>上記は複雑なので、実際にはSVGの利用を薦める（下図）。</li>
+    </ul>
+    <pre class="code">
+      background: #eee url('data:image/svg+xml,\
+      		&lt;svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".25">\
+      		&lt;rect x="50" width="50" height="50" /> \
+      		&lt;rect y="50" width="50" height="50" /> \
+      		&lt;/svg>');
+      background-size: 30px 30px;</pre>
+    <div class="container">
       <div class="ex6-15"></div>
     </div>
   </body>
